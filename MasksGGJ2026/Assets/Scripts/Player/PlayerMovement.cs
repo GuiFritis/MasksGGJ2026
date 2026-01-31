@@ -11,8 +11,15 @@ public class PlayerMovement : MonoBehaviour
     
 
     [Header("Movement")]
-    [SerializeField] private float _playerSpeed = 2f;
+    [SerializeField] private float _playerSpeed = 750f;
+    [SerializeField] private float _jumpHeight = 200f;
     private float _direction = 0f;
+
+    [SerializeField] private Renderer _playerRenderer;
+    [SerializeField] private LayerMask _groundLayer;
+
+    [SerializeField] private Vector2 _feetBoxOffset;
+    [SerializeField] private Vector2 _feetBoxSize;
 
     void OnValidate()
     {
@@ -23,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Awake()
-    {
+    {            
         SetUpInputs();
     }
 
@@ -32,22 +39,24 @@ public class PlayerMovement : MonoBehaviour
         _inputs = new();
         _inputs.Enable();
         _inputs.Gameplay.Move.performed += Move;
+        _inputs.Gameplay.Move.canceled += StopMove;
         _inputs.Gameplay.Jump.started += Jump;
-    }
-
-    private void FixedUpdate()
-    {
-        if(_direction != 0)
-        {
-            //movimenta
-        }
     }
 
     #region MOVEMENT
     private void Move(InputAction.CallbackContext ctx)
     {
         _direction = ctx.ReadValue<float>();
-        _rigdbody.AddForce(_direction * _playerSpeed * Time.deltaTime * Vector2.right);
+    }
+
+    private void StopMove(InputAction.CallbackContext ctx)
+    {
+        _direction = 0f;
+    }
+
+    private void MovePlayer()
+    {
+        _rigdbody.AddForce(_direction * _playerSpeed * Time.deltaTime * Vector2.right, ForceMode2D.Force);
     }
     #endregion
 
@@ -59,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void JumpPlayer() {
-        _rigdbody.AddForce(Vector2.up * Time.fixedDeltaTime * _jumpHeight, ForceMode2D.Impulse);
+        _rigdbody.AddForce(_jumpHeight * Time.fixedDeltaTime * Vector2.up, ForceMode2D.Impulse);
 
         _grounded = false;
     }
@@ -71,15 +80,24 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (!_grounded) {
-            Vector2 point = new Vector2(Transform.Position.x, Transform.Position.y);
-            // Vector2 size = ;
-            // float angle = ;
-
-            // Collider2D groundTouched = OverlapBox(point, size, angle, _groundLayer, -Mathf.Infinity, Mathf.Infinity);
-
-            // if (Collider2D) {
-            //     _grounded = true;
-            // }
+            Collider2D groundTouched = Physics2D.OverlapBox((Vector2)transform.position - _feetBoxOffset, _feetBoxSize, 0, _groundLayer);
+            if (groundTouched != null) {
+                _grounded = true;
+            }
         }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if((_groundLayer.value & (1 << collision.gameObject.layer)) > 0)
+        {
+            _grounded = false;
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube((Vector2)transform.position - _feetBoxOffset, _feetBoxSize);
     }
 }

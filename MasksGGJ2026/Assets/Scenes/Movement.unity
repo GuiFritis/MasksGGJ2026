@@ -502,6 +502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   _playerSpeed: 750
   _jumpHeight: 200
+  _playerRenderer: {fileID: 563851174}
   _groundLayer:
     serializedVersion: 2
     m_Bits: 0
