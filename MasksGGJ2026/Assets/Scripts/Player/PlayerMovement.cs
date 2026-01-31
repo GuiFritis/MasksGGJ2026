@@ -8,12 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private InGame _inputs;
     private bool _grounded = true;
     public bool IsGrounded => _grounded;
+    
 
-    [SerializeField] private float _playerSpeed = 100f;
-    [SerializeField] private float _jumpHeight = 100f;
+    [Header("Movement")]
+    [SerializeField] private float _playerSpeed = 2f;
     private float _direction = 0f;
-
-    [SerializeField] private LayerMask _groundLayer;  
 
     void OnValidate()
     {
@@ -24,9 +23,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Awake()
-    {            
-        _rigdbody = GetComponent<Rigidbody2D>();
-
+    {
         SetUpInputs();
     }
 
@@ -35,21 +32,22 @@ public class PlayerMovement : MonoBehaviour
         _inputs = new();
         _inputs.Enable();
         _inputs.Gameplay.Move.performed += Move;
-        _inputs.Gameplay.Move.canceled += StopMove;
         _inputs.Gameplay.Jump.started += Jump;
     }
 
+    private void FixedUpdate()
+    {
+        if(_direction != 0)
+        {
+            //movimenta
+        }
+    }
+
     #region MOVEMENT
-    private void Move(InputAction.CallbackContext ctx) {
+    private void Move(InputAction.CallbackContext ctx)
+    {
         _direction = ctx.ReadValue<float>();
-    }
-
-    private void StopMove(InputAction.CallbackContext ctx) {
-        _direction = 0f;
-    }
-
-    void MovePlayer() {
-        _rigdbody.AddForce(_direction * _playerSpeed * Time.fixedDeltaTime * Vector2.right, ForceMode2D.Force);
+        _rigdbody.AddForce(_direction * _playerSpeed * Time.deltaTime * Vector2.right);
     }
     #endregion
 
