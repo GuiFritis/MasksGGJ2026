@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float _playerSpeed = 750f;
     [SerializeField] private float _jumpHeight = 200f;
+    [SerializeField] public float _groundFriction = 1.5f;
     private float _direction = 0f;
 
     [SerializeField] private Renderer _playerRenderer;
@@ -104,6 +105,30 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    private void GroundedFriction()
+    {
+        float _accelerationX = _groundFriction;
+
+        _accelerationX *= Mathf.Sign(_rigdbody.linearVelocity.x) * -1;
+
+        _rigdbody.AddForce(Vector2.right * _accelerationX, ForceMode2D.Force);
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+        {
+            if((_groundLayer.value & (1 << collision.gameObject.layer)) != 0 && _direction == 0f)
+            {
+                if(Mathf.Abs(_rigdbody.linearVelocity.x) > _groundFriction / 5)
+                {
+                    GroundedFriction();
+                } 
+                else 
+                {
+                    _rigdbody.linearVelocity *= Vector2.up;
+                }
+            }
+        }
 
     void OnCollisionExit2D(Collision2D collision)
     {
