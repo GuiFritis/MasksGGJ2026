@@ -505,7 +505,9 @@ MonoBehaviour:
   _playerRenderer: {fileID: 563851174}
   _groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  _feetBoxOffset: {x: 0, y: 0.52}
+  _feetBoxSize: {x: 0.95, y: 0.15}
 --- !u!50 &563851173
 Rigidbody2D:
   serializedVersion: 5
@@ -532,7 +534,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &563851174
 SpriteRenderer:
   serializedVersion: 2
@@ -601,7 +603,7 @@ Transform:
   m_GameObject: {fileID: 563851170}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.0036392, y: -0.7832172, z: 0}
+  m_LocalPosition: {x: 2.98, y: -0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
