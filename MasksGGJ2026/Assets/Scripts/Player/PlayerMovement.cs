@@ -8,6 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private InGame _inputs;
     private bool _grounded = true;
     public bool IsGrounded => _grounded;
+    
+
+    [Header("Movement")]
+    [SerializeField] private float _playerSpeed = 2f;
+    private float _direction = 0f;
 
     void OnValidate()
     {
@@ -30,11 +35,19 @@ public class PlayerMovement : MonoBehaviour
         _inputs.Gameplay.Jump.started += Jump;
     }
 
+    private void FixedUpdate()
+    {
+        if(_direction != 0)
+        {
+            //movimenta
+        }
+    }
+
     #region MOVEMENT
     private void Move(InputAction.CallbackContext ctx)
     {
-        float direction = ctx.ReadValue<float>();
-        //Aqui o personagem deve ser movido de acordo com a direção
+        _direction = ctx.ReadValue<float>();
+        _rigdbody.AddForce(_direction * _playerSpeed * Time.deltaTime * Vector2.right);
     }
     #endregion
 
