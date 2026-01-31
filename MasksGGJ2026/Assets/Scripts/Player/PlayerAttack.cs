@@ -4,25 +4,47 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(PlayerMovement))]
 public class PlayerAttack : MonoBehaviour
 {
-    private Rigidbody2D _rigdbody;
+    private Rigidbody2D _rigidbody;
     private PlayerMovement _playerMovement;
     private InGame _inputs;
+    [SerializeField]
+    private Vector2 _attackOffset;
+    [SerializeField]
+    private float _attackRadius;
+    [SerializeField]
+    private LayerMask _pogoLayer;
+    [SerializeField]
+    private float _knockback;
+    [SerializeField]
+    private float _attackCooldown;
+
+    private float _attackTimer = 0f;
+
+    private bool CanAttack => _attackTimer <= 0f;
 
     void OnValidate()
     {
-        if(_rigdbody == null)
+        if (_rigidbody == null)
         {
-            _rigdbody = GetComponent<Rigidbody2D>();
+            _rigidbody = GetComponent<Rigidbody2D>();
         }
-        if(_playerMovement == null)
+        if (_playerMovement == null)
         {
             _playerMovement = GetComponent<PlayerMovement>();
         }
     }
-    
+
     void Awake()
     {
         SetUpInputs();
+    }
+
+    void Update()
+    {
+        if (_attackTimer > 0)
+        {
+            _attackTimer -= Time.deltaTime;
+        }
     }
 
     private void SetUpInputs()
@@ -34,9 +56,35 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack(InputAction.CallbackContext context)
     {
-        if(_playerMovement.IsGrounded)
+        if (CanAttack)
         {
-            //? Aqui deve ser realizado o ataque
+            _attackTimer = _attackCooldown;
+
+            Debug.Log("Attack");
+
+            Vector2 attackPosition = (Vector2)transform.position + _attackOffset;
+
+            Collider2D[] hits = Physics2D.OverlapCircleAll(
+                attackPosition,
+                _attackRadius,
+                _pogoLayer
+            );
+
+            if (hits.Length == 0)
+                return;
+
+            _rigidbody.linearVelocityY = 0;
+
+            Debug.Log("hit");
+
+            _rigidbody.AddForce(Vector2.up * _knockback, ForceMode2D.Impulse);
         }
+
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(_attackOffset + (Vector2)transform.position, _attackRadius);
     }
 }
