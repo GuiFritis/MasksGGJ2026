@@ -8,10 +8,12 @@ public class PlayerMaskManager : MonoBehaviour
     private MaskSO _mask;
     private int _currentCharges = 0;
     public static Action<int> onChargeSpent;
+    public static Action spendCharge;
 
     void Awake()
     {
-        SetMask(_maskSkills[0].GetMaskSO);
+        SetMask(_maskSkills[1].GetMaskSO);
+        spendCharge += SpendCharge;
     }
 
     public void SetMask(MaskSO mask)
@@ -21,7 +23,7 @@ public class PlayerMaskManager : MonoBehaviour
         _maskSkills.Find(i => i.GetMaskSO.Equals(_mask))?.EquipMask(this);        
     }
 
-    public void UseSkill()
+    public void SpendCharge()
     {
         _currentCharges--;
         onChargeSpent?.Invoke(_currentCharges);

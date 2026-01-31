@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class MaskSkillDoubleJump : MaskSkillBase
+public class MaskSkillDash : MaskSkillBase
 {
     [SerializeField] private PlayerMovement _playerMovement;
-    private static PlayerMaskManager _maskManager;
+    private static PlayerMaskManager _maskManager; 
 
     public override void EquipMask(PlayerMaskManager maskManager)
     {
-        _playerMovement.AllowDoubleJump(true);
+        _playerMovement.AllowDash(true);
         PlayerMaskManager.onChargeSpent += ChargeSpent;
         _maskManager = maskManager;
     }
@@ -16,7 +16,7 @@ public class MaskSkillDoubleJump : MaskSkillBase
     {
         if(charges <= 0)
         {
-            _playerMovement.AllowDoubleJump(false);
+            _playerMovement.AllowDash(false);
             PlayerMaskManager.onChargeSpent -= ChargeSpent;
         }
     }

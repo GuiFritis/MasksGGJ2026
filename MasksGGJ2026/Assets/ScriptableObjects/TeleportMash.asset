@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 060b3c0d85573d04d9de8ea1c5b728d3, type: 3}
-  m_Name: DoubleJumpMask
+  m_Name: TeleportMash
   m_EditorClassIdentifier: Assembly-CSharp::MaskSO
-  maskName: Mask of Material
-  description: Allows it's bearer to make the even the air a think material to jump
-    mid-air
+  maskName: Mask of Reality
+  description: Allows it's bearer to shape reality, switching places with an object
+    in sight
   sprite: {fileID: 0}
-  charges: 3
-  eMaskSkill: 0
+  charges: 2
+  eMaskSkill: 2

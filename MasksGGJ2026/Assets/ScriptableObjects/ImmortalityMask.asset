@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 060b3c0d85573d04d9de8ea1c5b728d3, type: 3}
-  m_Name: DoubleJumpMask
+  m_Name: ImmortalityMask
   m_EditorClassIdentifier: Assembly-CSharp::MaskSO
-  maskName: Mask of Material
-  description: Allows it's bearer to make the even the air a think material to jump
-    mid-air
+  maskName: Mask of Eternity
+  description: Allows it's bearer to fool death
   sprite: {fileID: 0}
   charges: 3
-  eMaskSkill: 0
+  eMaskSkill: 4

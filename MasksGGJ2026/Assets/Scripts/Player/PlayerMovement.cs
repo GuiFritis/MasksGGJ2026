@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,8 +10,12 @@ public class PlayerMovement : MonoBehaviour
     private InGame _inputs;
     [Header("Movement")]
     [SerializeField] private float _playerSpeed = 750f;
+    [SerializeField] private float _maxSpeed = 10f;
     [SerializeField] public float _groundFriction = 1.5f;
     private float _direction = 0f;
+    [Header("Dash")]
+    [SerializeField] private float _dashSpeed = 3000f;
+    private bool _isDashing;
     [Header("Jump")]
     [SerializeField] private float _jumpForce = 200f;
     [SerializeField] private LayerMask _groundLayer;
@@ -20,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     private bool _doubleJumped = false;
     private float _coyoteTimeCounter;    
     private float _jumpLimiterCounter;
-    public static Action onDoubleJump;
 
     [Header("Ground")]
     [SerializeField] private Vector2 _feetBoxOffset;
@@ -54,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _jumpLimiterCounter -= Time.fixedDeltaTime;
 
-        if (_direction != 0f) {
+        if (_direction != 0f && !_isDashing) {
             MovePlayer();
         }
 
@@ -83,6 +87,46 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         _rigdbody.AddForce(_direction * _playerSpeed * Time.deltaTime * Vector2.right, ForceMode2D.Force);
+        if(Mathf.Abs(_rigdbody.linearVelocityX) > _maxSpeed)
+        {
+            _rigdbody.linearVelocityX = _maxSpeed * Mathf.Sign(_rigdbody.linearVelocityX);
+        }
+    }
+    #endregion
+
+    #region DASH
+    public void AllowDash(bool allow)
+    {
+        if(allow)
+        {
+            _inputs.Gameplay.UseMask.performed += Dash;
+        }
+        else
+        {
+            _inputs.Gameplay.UseMask.performed -= Dash;            
+        }
+    }
+
+    private void Dash(InputAction.CallbackContext context)
+    {
+        if(_direction != 0 && !_isDashing)
+        {
+            _isDashing = true;
+            PlayerMaskManager.spendCharge?.Invoke();
+            _rigdbody.gravityScale = 0;
+            _rigdbody.linearVelocityY = 0;
+            _rigdbody.AddForce(_direction * _dashSpeed * Vector2.right, ForceMode2D.Impulse);
+            StartCoroutine(DashReturnGravity());
+        }
+    }
+
+    private IEnumerator DashReturnGravity()
+    {
+        yield return new WaitForSeconds(0.3f);
+        _rigdbody.gravityScale = 1;
+        _rigdbody.linearVelocityX = 0;
+        _isDashing = false;
+        MovePlayer();
     }
     #endregion
 
@@ -114,7 +158,7 @@ public class PlayerMovement : MonoBehaviour
         _doubleJumped = true;
         _rigdbody.linearVelocityY = 0;
         _rigdbody.AddForce(_jumpForce * Time.fixedDeltaTime * Vector2.up, ForceMode2D.Impulse);
-        onDoubleJump?.Invoke();
+        PlayerMaskManager.spendCharge?.Invoke();
     }
 
     public void AllowDoubleJump(bool canDoubleJump)
