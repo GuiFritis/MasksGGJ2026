@@ -41,7 +41,7 @@ public class ColorManager : MonoBehaviour
 [System.Serializable]
 public struct ColorConfig
 {
-    [Range(0, 1f)] public float hueOffset;
+    [Range(-1f, 1f)] public float hueOffset;
     [Range(0, 1f)] public float saturation;
     [Range(0, 1f)] public float brightness;
 }
