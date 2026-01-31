@@ -8,7 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private InGame _inputs;
     private bool _grounded = true;
     public bool IsGrounded => _grounded;
-    
+
+    private float _coyoteTime = 0.05f;
+    private float _coyoteTimeCounter;    
+    private float _jumpLimiter = 0.05f;
+    private float _jumpLimiterCounter;
 
     [Header("Movement")]
     [SerializeField] private float _playerSpeed = 750f;
@@ -62,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
     #region JUMP
     private void Jump(InputAction.CallbackContext context) {
-        if (_grounded) {
+        if (_coyoteTimeCounter > 0f && _jumpLimiterCounter <= 0f) {
             JumpPlayer();   
         }
     }
@@ -70,17 +74,31 @@ public class PlayerMovement : MonoBehaviour
     void JumpPlayer() {
         _rigdbody.AddForce(_jumpHeight * Time.fixedDeltaTime * Vector2.up, ForceMode2D.Impulse);
 
+        _coyoteTimeCounter = 0f;
+        _jumpLimiterCounter = _jumpLimiter;
+
         _grounded = false;
     }
     #endregion
 
     void FixedUpdate() {
+        _jumpLimiterCounter -= Time.fixedDeltaTime;
+
         if (_direction != 0f) {
             MovePlayer();
         }
 
-        if (!_grounded) {
+        if (_grounded)
+        {
+            _coyoteTimeCounter = _coyoteTime;
+            _jumpLimiterCounter = 0f;
+        } 
+        else
+        {
+            _coyoteTimeCounter -= Time.fixedDeltaTime;
+            
             Collider2D groundTouched = Physics2D.OverlapBox((Vector2)transform.position - _feetBoxOffset, _feetBoxSize, 0, _groundLayer);
+        
             if (groundTouched != null) {
                 _grounded = true;
             }
