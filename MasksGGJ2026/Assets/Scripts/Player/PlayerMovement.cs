@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,9 +14,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _maxSpeed = 10f;
     [SerializeField] public float _groundFriction = 1.5f;
     private float _direction = 0f;
+
     [Header("Dash")]
     [SerializeField] private float _dashSpeed = 3000f;
     private bool _isDashing;
+
     [Header("Jump")]
     [SerializeField] private float _jumpForce = 200f;
     [SerializeField] private LayerMask _groundLayer;
@@ -23,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _jumpLimiter = 0.05f;
     private bool _canDoubleJump = false;
     private bool _doubleJumped = false;
-    private float _coyoteTimeCounter;    
+    private float _coyoteTimeCounter;
     private float _jumpLimiterCounter;
 
     [Header("Ground")]
@@ -32,16 +35,27 @@ public class PlayerMovement : MonoBehaviour
     private bool _grounded = true;
     public bool IsGrounded => _grounded;
 
+    [Header("Throw action")]
+    [SerializeField]
+    private GameObject _throwablePrefab;
+    [SerializeField]
+    private Transform _throwPoint;
+    [SerializeField]
+    private float _throwForce = 10f;
+
+    private bool _facingRight = true;
+    private GameObject _activeProjectile;
+
     void OnValidate()
     {
-        if(_rigdbody == null)
+        if (_rigdbody == null)
         {
             _rigdbody = GetComponent<Rigidbody2D>();
         }
     }
 
     void Awake()
-    {            
+    {
         SetUpInputs();
     }
 
@@ -52,13 +66,14 @@ public class PlayerMovement : MonoBehaviour
         _inputs.Gameplay.Move.performed += Move;
         _inputs.Gameplay.Move.canceled += StopMove;
         _inputs.Gameplay.Jump.started += Jump;
-    }    
+    }
 
-    void FixedUpdate() 
+    void FixedUpdate()
     {
         _jumpLimiterCounter -= Time.fixedDeltaTime;
 
-        if (_direction != 0f && !_isDashing) {
+        if (_direction != 0f && !_isDashing)
+        {
             MovePlayer();
         }
 
@@ -66,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _coyoteTimeCounter = _graceTime;
             _jumpLimiterCounter = 0f;
-        } 
+        }
         else
         {
             CheckGround();
@@ -77,6 +92,22 @@ public class PlayerMovement : MonoBehaviour
     private void Move(InputAction.CallbackContext ctx)
     {
         _direction = ctx.ReadValue<float>();
+        if (_facingRight && _direction < 0)
+        {
+            Flip();
+        }
+
+        if (!_facingRight && _direction > 0)
+        {
+            Flip();
+        }
+    }
+    public void Flip()
+    {
+        _facingRight = !_facingRight;
+        var scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 
     private void StopMove(InputAction.CallbackContext ctx)
@@ -87,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         _rigdbody.AddForce(_direction * _playerSpeed * Time.deltaTime * Vector2.right, ForceMode2D.Force);
-        if(Mathf.Abs(_rigdbody.linearVelocityX) > _maxSpeed)
+        if (Mathf.Abs(_rigdbody.linearVelocityX) > _maxSpeed)
         {
             _rigdbody.linearVelocityX = _maxSpeed * Mathf.Sign(_rigdbody.linearVelocityX);
         }
@@ -97,19 +128,19 @@ public class PlayerMovement : MonoBehaviour
     #region DASH
     public void AllowDash(bool allow)
     {
-        if(allow)
+        if (allow)
         {
             _inputs.Gameplay.UseMask.performed += Dash;
         }
         else
         {
-            _inputs.Gameplay.UseMask.performed -= Dash;            
+            _inputs.Gameplay.UseMask.performed -= Dash;
         }
     }
 
     private void Dash(InputAction.CallbackContext context)
     {
-        if(_direction != 0 && !_isDashing)
+        if (_direction != 0 && !_isDashing)
         {
             _isDashing = true;
             PlayerMaskManager.spendCharge?.Invoke();
@@ -131,19 +162,19 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region JUMP
-    private void Jump(InputAction.CallbackContext context) 
+    private void Jump(InputAction.CallbackContext context)
     {
-        if (_coyoteTimeCounter > 0f && _jumpLimiterCounter <= 0f) 
+        if (_coyoteTimeCounter > 0f && _jumpLimiterCounter <= 0f)
         {
-            JumpPlayer();   
+            JumpPlayer();
         }
-        else if(_canDoubleJump && !_doubleJumped)
+        else if (_canDoubleJump && !_doubleJumped)
         {
             DoubleJump();
         }
     }
 
-    private void JumpPlayer() 
+    private void JumpPlayer()
     {
         _rigdbody.AddForce(_jumpForce * Time.fixedDeltaTime * Vector2.up, ForceMode2D.Impulse);
 
@@ -153,7 +184,7 @@ public class PlayerMovement : MonoBehaviour
         _grounded = false;
     }
 
-    private void DoubleJump() 
+    private void DoubleJump()
     {
         _doubleJumped = true;
         _rigdbody.linearVelocityY = 0;
@@ -167,14 +198,61 @@ public class PlayerMovement : MonoBehaviour
     }
     #endregion
 
+    #region TELEPORT
+    public void AllowTeleport(bool allow)
+    {
+        if (allow)
+        {
+            _inputs.Gameplay.UseMask.performed += TryTeleport;
+        }
+        else
+        {
+            _inputs.Gameplay.UseMask.performed -= TryTeleport;
+        }
+    }
+
+    void TryTeleport(InputAction.CallbackContext context)
+    {
+        if (_activeProjectile != null)
+            return;
+
+        GameObject projectile = Instantiate(
+            _throwablePrefab,
+            _throwPoint.position,
+            Quaternion.identity
+        );
+
+        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+
+        rb.gravityScale = 0f;
+        rb.freezeRotation = true;
+
+        Vector2 direction = _facingRight ? Vector2.right : Vector2.left;
+        rb.linearVelocityX = direction.x * _throwForce;
+
+        _activeProjectile = projectile;
+
+        projectile
+            .GetComponent<MaskTeleportProjectile>()
+            .SetOwner(this);
+
+    }
+
+    public void ClearProjectile()
+    {
+        _activeProjectile = null;
+    }
+    #endregion
+
     #region GROUND
     private void CheckGround()
     {
         _coyoteTimeCounter -= Time.fixedDeltaTime;
-            
+
         Collider2D groundTouched = Physics2D.OverlapBox((Vector2)transform.position - _feetBoxOffset, _feetBoxSize, 0, _groundLayer);
-    
-        if (groundTouched != null) {
+
+        if (groundTouched != null)
+        {
             _grounded = true;
             _doubleJumped = false;
         }
@@ -190,23 +268,23 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnCollisionStay2D(Collision2D collision)
+    {
+        if ((_groundLayer.value & (1 << collision.gameObject.layer)) != 0 && _direction == 0f)
         {
-            if((_groundLayer.value & (1 << collision.gameObject.layer)) != 0 && _direction == 0f)
+            if (Mathf.Abs(_rigdbody.linearVelocity.x) > _groundFriction / 5)
             {
-                if(Mathf.Abs(_rigdbody.linearVelocity.x) > _groundFriction / 5)
-                {
-                    GroundedFriction();
-                } 
-                else 
-                {
-                    _rigdbody.linearVelocity *= Vector2.up;
-                }
+                GroundedFriction();
+            }
+            else
+            {
+                _rigdbody.linearVelocity *= Vector2.up;
             }
         }
+    }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if((_groundLayer.value & (1 << collision.gameObject.layer)) > 0)
+        if ((_groundLayer.value & (1 << collision.gameObject.layer)) > 0)
         {
             _grounded = false;
         }

@@ -12,7 +12,7 @@ public class PlayerMaskManager : MonoBehaviour
 
     void Awake()
     {
-        SetMask(_maskSkills[1].GetMaskSO);
+        SetMask(_maskSkills[0].GetMaskSO);
         spendCharge += SpendCharge;
     }
 

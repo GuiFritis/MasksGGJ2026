@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 8609366543070396779}
   - component: {fileID: 6780638913942656047}
   - component: {fileID: 8676801151390833218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
