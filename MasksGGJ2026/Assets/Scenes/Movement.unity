@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 188864328}
   - component: {fileID: 188864327}
   - component: {fileID: 188864326}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 03d45743d62bba8d19bc45f9b3735466, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: eca6286e5c8bb8d1c83953899d84ec5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -581,7 +581,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 9faf69f555e061c1f9d8778d2d55e78c, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: eca6286e5c8bb8d1c83953899d84ec5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

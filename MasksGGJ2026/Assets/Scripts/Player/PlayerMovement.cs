@@ -55,7 +55,9 @@ public class PlayerMovement : MonoBehaviour
 
     #region JUMP
     private void Jump(InputAction.CallbackContext context) {
-        JumpPlayer();
+        if (_grounded) {
+            JumpPlayer();   
+        }
     }
 
     void JumpPlayer() {
@@ -68,6 +70,18 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() {
         if (_direction != 0f) {
             MovePlayer();
+        }
+
+        if (!_grounded) {
+            Vector2 point = new Vector2(Transform.Position.x, Transform.Position.y);
+            // Vector2 size = ;
+            // float angle = ;
+
+            // Collider2D groundTouched = OverlapBox(point, size, angle, _groundLayer, -Mathf.Infinity, Mathf.Infinity);
+
+            // if (Collider2D) {
+            //     _grounded = true;
+            // }
         }
     }
 }
