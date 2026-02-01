@@ -506,7 +506,7 @@ MonoBehaviour:
   _deathLayer:
     serializedVersion: 2
     m_Bits: 128
-  _isUsingGhostMask: 1
+  _ghostTime: 3
 --- !u!1 &1273525630
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskSkillGhost
   _maskSO: {fileID: 11400000, guid: daa187e0a17bc394d9f40fb62ad50c72, type: 2}
-  _playerMovement: {fileID: 669451723}
+  _playerBase: {fileID: 669451728}
 --- !u!114 &1273525633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMaskManager
   _maskSkills:
-  - {fileID: 0}
+  - {fileID: 1273525632}
 --- !u!1 &1590966649
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +672,7 @@ GameObject:
   - component: {fileID: 1872115068}
   - component: {fileID: 1872115067}
   - component: {fileID: 1872115066}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[DefaultExecutionOrder(-1)]
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D _rigdbody;
@@ -38,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 _feetBoxSize;
     private bool _grounded = true;
     public bool IsGrounded => _grounded;
+    
+    [Header("Freeze Time")]    
+    [SerializeField] private float _freezeTime = 3f;
 
     [Header("Throw action")]
     [SerializeField]
@@ -302,9 +306,35 @@ public class PlayerMovement : MonoBehaviour
     }
     #endregion
 
-    void OnDrawGizmosSelected()
+    // void OnDrawGizmosSelected()
+    // {
+    //     Gizmos.color = Color.magenta;
+    //     Gizmos.DrawWireCube((Vector2)transform.position - _feetBoxOffset, _feetBoxSize);
+    // }
+    
+    #region FREEZE TIME
+    public void AllowFreezeTime(bool allow)
     {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawWireCube((Vector2)transform.position - _feetBoxOffset, _feetBoxSize);
+        if(allow)
+        {
+            _inputs.Gameplay.UseMask.performed += FreezeTime;
+        }
+        else
+        {
+            _inputs.Gameplay.UseMask.performed -= FreezeTime;            
+        }
     }
+
+    private void FreezeTime(InputAction.CallbackContext context) {
+        StartCoroutine(FreezeTimer());
+        MaskSkillFreezeTime.OnFreezeTime?.Invoke(true);
+        PlayerMaskManager.spendCharge?.Invoke();
+    }
+
+    private IEnumerator FreezeTimer()
+    {
+        yield return new WaitForSeconds(_freezeTime);
+        MaskSkillFreezeTime.OnFreezeTime?.Invoke(false);
+    }
+    #endregion
 }

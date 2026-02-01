@@ -5,7 +5,7 @@ public class TraversableObject : MonoBehaviour
 {
     private Collider2D _collider;
 
-    void Awake()
+    void OnValidate()
     {
         _collider = GetComponent<Collider2D>();
     }
