@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a2b42bf247d7584cacb2985d1623aa3, type: 3}
-  m_Name: DodoHit
+  m_Name: HitMiss
   m_EditorClassIdentifier: Assembly-CSharp::AudioSO
   audioClips:
-  - {fileID: 8300000, guid: cf24cd290367f744fbbd6b906f8b86ac, type: 3}
+  - {fileID: 8300000, guid: 170073fd647aace988968cf37e698f81, type: 3}
   pitch: 1
   randomizePith: 1
   pitchRange: 0.1
