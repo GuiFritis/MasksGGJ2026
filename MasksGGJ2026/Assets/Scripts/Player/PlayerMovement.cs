@@ -123,7 +123,8 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         _rigdbody.AddForce(_direction * _playerSpeed * Time.deltaTime * Vector2.right, ForceMode2D.Force);
-        if (Mathf.Abs(_rigdbody.linearVelocityX) > _maxSpeed)
+        
+        if(Mathf.Abs(_rigdbody.linearVelocityX) > _maxSpeed)
         {
             _rigdbody.linearVelocityX = _maxSpeed * Mathf.Sign(_rigdbody.linearVelocityX);
         }
