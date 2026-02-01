@@ -19,7 +19,7 @@ public class ChooseMaskMenu : MonoBehaviour
                 UIFade uiFade = gameObject.GetComponentInChildren<UIFade>();
                 uiFade.FadeOut(() =>
                 {
-                    SceneManager.LoadScene(3);
+                    SceneManager.LoadScene(2);
                 });
             }
         }

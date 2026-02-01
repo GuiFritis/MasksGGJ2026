@@ -215,7 +215,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 600373684}
         m_TargetAssemblyTypeName: ChooseMaskMenu, Assembly-CSharp
         m_MethodName: OnAnyButtonClicked
         m_Mode: 1
@@ -1466,7 +1466,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 600373684}
         m_TargetAssemblyTypeName: ChooseMaskMenu, Assembly-CSharp
         m_MethodName: OnAnyButtonClicked
         m_Mode: 1
