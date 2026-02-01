@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: b04b6e608feb91041ba0ba093cd1e7de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1606144401392120090
+    second: animacao-idle (16)_0
+  - first:
+      213: 3656302970947436012
+    second: animacao-idle (16)_1
+  - first:
+      213: -210963037447453599
+    second: animacao-idle (16)_2
+  - first:
+      213: 8375431858412128461
+    second: animacao-idle (16)_3
+  - first:
+      213: -4273257741461142380
+    second: animacao-idle (16)_4
+  - first:
+      213: -7755877834218625115
+    second: animacao-idle (16)_5
+  - first:
+      213: -5559013126698331219
+    second: animacao-idle (16)_6
+  - first:
+      213: 2523636343088587092
+    second: animacao-idle (16)_7
+  - first:
+      213: -519697144842915957
+    second: animacao-idle (16)_8
+  - first:
+      213: -6742134802084559282
+    second: animacao-idle (16)_9
+  - first:
+      213: 449530070569671858
+    second: animacao-idle (16)_10
+  - first:
+      213: -546431626475346246
+    second: animacao-idle (16)_11
+  - first:
+      213: -1146035820649148673
+    second: animacao-idle (16)_12
+  - first:
+      213: -5256228628331266120
+    second: animacao-idle (16)_13
+  - first:
+      213: 1876865126439503544
+    second: animacao-idle (16)_14
+  - first:
+      213: 9005839012734390742
+    second: animacao-idle (16)_15
+  - first:
+      213: -8300422902221214874
+    second: animacao-idle (16)_16
+  - first:
+      213: 7224603415985297720
+    second: animacao-idle (16)_17
+  - first:
+      213: -8443676963936326714
+    second: animacao-idle (16)_18
+  - first:
+      213: -6038573600177153030
+    second: animacao-idle (16)_19
+  - first:
+      213: -9213880668129117638
+    second: animacao-idle (16)_20
+  - first:
+      213: -188851430706560508
+    second: animacao-idle (16)_21
+  - first:
+      213: -1727324446395588930
+    second: animacao-idle (16)_22
+  - first:
+      213: -8764107643931626909
+    second: animacao-idle (16)_23
+  - first:
+      213: 4783927144711129632
+    second: animacao-idle (16)_24
+  - first:
+      213: 1509292013760044701
+    second: animacao-idle (16)_25
+  - first:
+      213: -7519167463249138844
+    second: animacao-idle (16)_26
+  - first:
+      213: 554285498354474805
+    second: animacao-idle (16)_27
+  - first:
+      213: -6023732655967890819
+    second: animacao-idle (16)_28
+  - first:
+      213: 4880601809586251452
+    second: animacao-idle (16)_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animacao-idle (16)_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 261
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11b5f6c2db2a4610800000000000000
+      internalID: 1606144401392120090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 206
+        width: 85
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cedf68e1e2ccdb230800000000000000
+      internalID: 3656302970947436012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 261
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16405343c32821df0800000000000000
+      internalID: -210963037447453599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_3
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 261
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8052976e28b3470800000000000000
+      internalID: 8375431858412128461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_4
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 207
+        width: 89
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 494458e89b652b4c0800000000000000
+      internalID: -4273257741461142380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_5
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 261
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a7a212c3369d5490800000000000000
+      internalID: -7755877834218625115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_6
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 263
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da39961a30b6ad2b0800000000000000
+      internalID: -5559013126698331219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_7
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 210
+        width: 100
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 451af0c12e1c50320800000000000000
+      internalID: 2523636343088587092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_8
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 263
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f6ad2433aa9c8f0800000000000000
+      internalID: -519697144842915957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_9
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 266
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4683fd6e102f62a0800000000000000
+      internalID: -6742134802084559282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_10
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 216
+        width: 121
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc592ca73d0d3600800000000000000
+      internalID: 449530070569671858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_11
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 266
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab6e5e1b45faa68f0800000000000000
+      internalID: -546431626475346246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_12
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 225
+        width: 121
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe855a3e767810f0800000000000000
+      internalID: -1146035820649148673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_13
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 230
+        width: 50
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf731649ef1e07b0800000000000000
+      internalID: -5256228628331266120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_14
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 271
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6ceb073e6fb0a10800000000000000
+      internalID: 1876865126439503544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_15
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 49
+        width: 47
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1536afdda2bfc70800000000000000
+      internalID: 9005839012734390742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_16
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 33
+        width: 79
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66b66931959fecc80800000000000000
+      internalID: -8300422902221214874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_17
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 51
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83990ec7782f24460800000000000000
+      internalID: 7224603415985297720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_18
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 46
+        width: 48
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb2d6ea98802da80800000000000000
+      internalID: -8443676963936326714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_19
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 38
+        width: 79
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afb936bed4da23ca0800000000000000
+      internalID: -6038573600177153030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_20
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 49
+        width: 50
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a335d7958b12080800000000000000
+      internalID: -9213880668129117638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_21
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 41
+        width: 49
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4024965df90116df0800000000000000
+      internalID: -188851430706560508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_22
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 41
+        width: 79
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebe1eb8519f4708e0800000000000000
+      internalID: -1727324446395588930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_23
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 43
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3627b263882af5680800000000000000
+      internalID: -8764107643931626909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_24
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 77
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a0bdb446ce36240800000000000000
+      internalID: 4783927144711129632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_25
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 31
+        width: 144
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e5086071512f410800000000000000
+      internalID: 1509292013760044701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_26
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 77
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46b2c5ac70d86a790800000000000000
+      internalID: -7519167463249138844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_27
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 69
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53f919959b731b700800000000000000
+      internalID: 554285498354474805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_28
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 14
+        width: 85
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d721d138017676ca0800000000000000
+      internalID: -6023732655967890819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (16)_29
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 69
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb6648ebc716bb340800000000000000
+      internalID: 4880601809586251452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      animacao-idle (16)_0: 1606144401392120090
+      animacao-idle (16)_1: 3656302970947436012
+      animacao-idle (16)_10: 449530070569671858
+      animacao-idle (16)_11: -546431626475346246
+      animacao-idle (16)_12: -1146035820649148673
+      animacao-idle (16)_13: -5256228628331266120
+      animacao-idle (16)_14: 1876865126439503544
+      animacao-idle (16)_15: 9005839012734390742
+      animacao-idle (16)_16: -8300422902221214874
+      animacao-idle (16)_17: 7224603415985297720
+      animacao-idle (16)_18: -8443676963936326714
+      animacao-idle (16)_19: -6038573600177153030
+      animacao-idle (16)_2: -210963037447453599
+      animacao-idle (16)_20: -9213880668129117638
+      animacao-idle (16)_21: -188851430706560508
+      animacao-idle (16)_22: -1727324446395588930
+      animacao-idle (16)_23: -8764107643931626909
+      animacao-idle (16)_24: 4783927144711129632
+      animacao-idle (16)_25: 1509292013760044701
+      animacao-idle (16)_26: -7519167463249138844
+      animacao-idle (16)_27: 554285498354474805
+      animacao-idle (16)_28: -6023732655967890819
+      animacao-idle (16)_29: 4880601809586251452
+      animacao-idle (16)_3: 8375431858412128461
+      animacao-idle (16)_4: -4273257741461142380
+      animacao-idle (16)_5: -7755877834218625115
+      animacao-idle (16)_6: -5559013126698331219
+      animacao-idle (16)_7: 2523636343088587092
+      animacao-idle (16)_8: -519697144842915957
+      animacao-idle (16)_9: -6742134802084559282
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

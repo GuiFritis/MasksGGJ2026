@@ -1,76 +1,43 @@
 fileFormatVersion: 2
-guid: a55ceb1cb7f413a4f81bc32cf9f6857e
+guid: e396ff7646098a540963ee45e107df55
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1631017502767035647
-    second: attack_spritesheet_0
+      213: 8039040908428475593
+    second: animacao-idle (24)_0
   - first:
-      213: -5792493106773093131
-    second: attack_spritesheet_1
+      213: -6971232411475700834
+    second: animacao-idle (24)_1
   - first:
-      213: -6849216117257470902
-    second: attack_spritesheet_2
+      213: 5017659054847330935
+    second: animacao-idle (24)_2
   - first:
-      213: 5850682642412293950
-    second: attack_spritesheet_3
+      213: -4289237803707421102
+    second: animacao-idle (24)_3
   - first:
-      213: 7272358023546382398
-    second: attack_spritesheet_4
+      213: 4213868242733591177
+    second: animacao-idle (24)_4
   - first:
-      213: 2510227162676122955
-    second: attack_spritesheet_5
+      213: -5114161387987284843
+    second: animacao-idle (24)_5
   - first:
-      213: 5248113354222379143
-    second: attack_spritesheet_6
+      213: 2679174413336306726
+    second: animacao-idle (24)_6
   - first:
-      213: 1919359231279440812
-    second: attack_spritesheet_7
+      213: -6881722381078912501
+    second: animacao-idle (24)_7
   - first:
-      213: 6766548999926937531
-    second: attack_spritesheet_8
+      213: 6059848475690059683
+    second: animacao-idle (24)_8
   - first:
-      213: 2458879139469159831
-    second: attack_spritesheet_9
+      213: -7217641044294005239
+    second: animacao-idle (24)_9
   - first:
-      213: -7160216092369072037
-    second: attack_spritesheet_10
+      213: 1846287775362378085
+    second: animacao-idle (24)_10
   - first:
-      213: 5400531198641214405
-    second: attack_spritesheet_11
-  - first:
-      213: 5462535778045379857
-    second: attack_spritesheet_12
-  - first:
-      213: 7299487408546744946
-    second: attack_spritesheet_13
-  - first:
-      213: -3929352107239746284
-    second: attack_spritesheet_14
-  - first:
-      213: 4680367883479026435
-    second: attack_spritesheet_15
-  - first:
-      213: 4620586134079496162
-    second: attack_spritesheet_16
-  - first:
-      213: -7229570810878059465
-    second: attack_spritesheet_17
-  - first:
-      213: 2342241261566685710
-    second: attack_spritesheet_18
-  - first:
-      213: 6201202725151605945
-    second: attack_spritesheet_19
-  - first:
-      213: -8748072455344567894
-    second: attack_spritesheet_20
-  - first:
-      213: 5231476236703847185
-    second: attack_spritesheet_21
-  - first:
-      213: 2724945258555525336
-    second: attack_spritesheet_22
+      213: 3466043604134021639
+    second: animacao-idle (24)_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -192,221 +159,265 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack_spritesheet_0
+      name: animacao-idle (24)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 192
-        height: 192
+        x: 37
+        y: 206
+        width: 127
+        height: 175
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10b402509367d59e0800000000000000
-      internalID: -1631017502767035647
+      spriteID: 9cc76b11d19609f60800000000000000
+      internalID: 8039040908428475593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_spritesheet_1
+      name: animacao-idle (24)_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
-        width: 192
-        height: 192
+        x: 38
+        y: 194
+        width: 47
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f414e6953eec9fa0800000000000000
-      internalID: -5792493106773093131
+      spriteID: e931d439e05314f90800000000000000
+      internalID: -6971232411475700834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_spritesheet_2
+      name: animacao-idle (24)_2
       rect:
         serializedVersion: 2
-        x: 384
-        y: 192
-        width: 192
-        height: 192
+        x: 233
+        y: 200
+        width: 123
+        height: 181
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4cfcf4ea32b2f0a0800000000000000
-      internalID: -6849216117257470902
+      spriteID: 77a8230635e42a540800000000000000
+      internalID: 5017659054847330935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_spritesheet_3
+      name: animacao-idle (24)_3
       rect:
         serializedVersion: 2
-        x: 576
-        y: 192
-        width: 192
-        height: 192
+        x: 444
+        y: 206
+        width: 104
+        height: 174
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3f47827ddcc13150800000000000000
-      internalID: 5850682642412293950
+      spriteID: 25ea7d061f09974c0800000000000000
+      internalID: -4289237803707421102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_spritesheet_4
+      name: animacao-idle (24)_4
       rect:
         serializedVersion: 2
-        x: 768
-        y: 192
-        width: 192
-        height: 192
+        x: 628
+        y: 205
+        width: 112
+        height: 173
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e38a1f0871b9ce460800000000000000
-      internalID: 7272358023546382398
+      spriteID: 98a6f6a37daaa7a30800000000000000
+      internalID: 4213868242733591177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_spritesheet_5
+      name: animacao-idle (24)_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 192
-        height: 192
+        x: 806
+        y: 199
+        width: 126
+        height: 174
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b45d8d00e4e16d220800000000000000
-      internalID: 2510227162676122955
+      spriteID: 59ccff84059d609b0800000000000000
+      internalID: -5114161387987284843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_spritesheet_6
+      name: animacao-idle (24)_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 192
-        height: 192
+        x: 38
+        y: 3
+        width: 126
+        height: 178
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 780a86b3a4b05d840800000000000000
-      internalID: 5248113354222379143
+      spriteID: 624e93e1fe65e2520800000000000000
+      internalID: 2679174413336306726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_spritesheet_7
+      name: animacao-idle (24)_7
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 192
-        height: 192
+        x: 240
+        y: 14
+        width: 116
+        height: 172
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca327c83d0fe2aa10800000000000000
-      internalID: 1919359231279440812
+      spriteID: b02afe094f53f70a0800000000000000
+      internalID: -6881722381078912501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_spritesheet_8
+      name: animacao-idle (24)_8
       rect:
         serializedVersion: 2
-        x: 576
-        y: 0
-        width: 192
-        height: 192
+        x: 444
+        y: 14
+        width: 104
+        height: 174
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb77be7f67c97ed50800000000000000
-      internalID: 6766548999926937531
+      spriteID: 3a7c23a0518e81450800000000000000
+      internalID: 6059848475690059683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_spritesheet_9
+      name: animacao-idle (24)_9
       rect:
         serializedVersion: 2
-        x: 768
-        y: 0
-        width: 192
-        height: 192
+        x: 619
+        y: 10
+        width: 121
+        height: 179
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79d6da5bc81bf1220800000000000000
-      internalID: 2458879139469159831
+      spriteID: 90e839ef5b9c5db90800000000000000
+      internalID: -7217641044294005239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (24)_10
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 14
+        width: 127
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 569ee9b13f45f9910800000000000000
+      internalID: 1846287775362378085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (24)_11
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 2
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a4c684b4cd91030800000000000000
+      internalID: 3466043604134021639
       vertices: []
       indices: 
       edges: []
@@ -415,7 +426,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: eea214ac182752505be56c30b7898871
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -423,20 +434,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":2.0},"gridSpriteSize":{"x":192.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      attack_spritesheet_0: -1631017502767035647
-      attack_spritesheet_1: -5792493106773093131
-      attack_spritesheet_2: -6849216117257470902
-      attack_spritesheet_3: 5850682642412293950
-      attack_spritesheet_4: 7272358023546382398
-      attack_spritesheet_5: 2510227162676122955
-      attack_spritesheet_6: 5248113354222379143
-      attack_spritesheet_7: 1919359231279440812
-      attack_spritesheet_8: 6766548999926937531
-      attack_spritesheet_9: 2458879139469159831
+      animacao-idle (24)_0: 8039040908428475593
+      animacao-idle (24)_1: -6971232411475700834
+      animacao-idle (24)_10: 1846287775362378085
+      animacao-idle (24)_11: 3466043604134021639
+      animacao-idle (24)_2: 5017659054847330935
+      animacao-idle (24)_3: -4289237803707421102
+      animacao-idle (24)_4: 4213868242733591177
+      animacao-idle (24)_5: -5114161387987284843
+      animacao-idle (24)_6: 2679174413336306726
+      animacao-idle (24)_7: -6881722381078912501
+      animacao-idle (24)_8: 6059848475690059683
+      animacao-idle (24)_9: -7217641044294005239
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

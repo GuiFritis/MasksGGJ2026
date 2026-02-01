@@ -1,121 +1,43 @@
 fileFormatVersion: 2
-guid: 94ee8552971ea234891e14f2fd6c19f9
+guid: fc9891c7c6540a3498c6b935179ca1ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3290519507126244636
-    second: jump_walk_spritesheet_0
+      213: 7146024577333615021
+    second: animacao-idle (7)_0
   - first:
-      213: -1832882468543406369
-    second: jump_walk_spritesheet_1
+      213: -7209521222431666292
+    second: animacao-idle (7)_1
   - first:
-      213: 8093753103763000986
-    second: jump_walk_spritesheet_2
+      213: -8838071595316738711
+    second: animacao-idle (7)_2
   - first:
-      213: 7254916131648137065
-    second: jump_walk_spritesheet_3
+      213: -8681837096808957182
+    second: animacao-idle (7)_3
   - first:
-      213: 26319739678852700
-    second: jump_walk_spritesheet_4
+      213: -7903066162634755487
+    second: animacao-idle (7)_4
   - first:
-      213: 5908055259175181496
-    second: jump_walk_spritesheet_5
+      213: 7551620696453179189
+    second: animacao-idle (7)_5
   - first:
-      213: 7283075248850174331
-    second: jump_walk_spritesheet_6
+      213: -1705421966690085552
+    second: animacao-idle (7)_6
   - first:
-      213: -1395110598928265417
-    second: jump_walk_spritesheet_7
+      213: 8270557848126414198
+    second: animacao-idle (7)_7
   - first:
-      213: -4906358573969781210
-    second: jump_walk_spritesheet_8
+      213: -5066782972279156345
+    second: animacao-idle (7)_8
   - first:
-      213: -4616717206761295872
-    second: jump_walk_spritesheet_9
+      213: -1266882771378346926
+    second: animacao-idle (7)_9
   - first:
-      213: 4959555752641587918
-    second: jump_walk_spritesheet_10
+      213: 9129315504887899127
+    second: animacao-idle (7)_10
   - first:
-      213: 2848419311124851288
-    second: jump_walk_spritesheet_11
-  - first:
-      213: 4381421863640103461
-    second: jump_walk_spritesheet_12
-  - first:
-      213: -9015138720129488237
-    second: jump_walk_spritesheet_13
-  - first:
-      213: 7029685640420578997
-    second: jump_walk_spritesheet_14
-  - first:
-      213: -785816202890274396
-    second: jump_walk_spritesheet_15
-  - first:
-      213: 384680444540285221
-    second: jump_walk_spritesheet_16
-  - first:
-      213: 24791689745620807
-    second: jump_walk_spritesheet_17
-  - first:
-      213: -2725502552740379359
-    second: jump_walk_spritesheet_18
-  - first:
-      213: 2502077484652607741
-    second: jump_walk_spritesheet_19
-  - first:
-      213: 3186518610838397557
-    second: jump_walk_spritesheet_20
-  - first:
-      213: -7250125407167514897
-    second: jump_walk_spritesheet_21
-  - first:
-      213: -886062115721710501
-    second: jump_walk_spritesheet_22
-  - first:
-      213: -2139350432784419753
-    second: jump_walk_spritesheet_23
-  - first:
-      213: -5853011822561915771
-    second: jump_walk_spritesheet_24
-  - first:
-      213: 3452689596206026199
-    second: jump_walk_spritesheet_25
-  - first:
-      213: -6629512562868937183
-    second: jump_walk_spritesheet_26
-  - first:
-      213: -5717496235642489660
-    second: jump_walk_spritesheet_27
-  - first:
-      213: 7941173913332434413
-    second: jump_walk_spritesheet_28
-  - first:
-      213: -5153461333352031929
-    second: jump_walk_spritesheet_29
-  - first:
-      213: 4046849182131783560
-    second: jump_walk_spritesheet_30
-  - first:
-      213: -6862999343475622812
-    second: jump_walk_spritesheet_31
-  - first:
-      213: -5698042285000139382
-    second: jump_walk_spritesheet_32
-  - first:
-      213: -5159263329913077779
-    second: jump_walk_spritesheet_33
-  - first:
-      213: -5714193307354963927
-    second: jump_walk_spritesheet_34
-  - first:
-      213: 2790375939047536094
-    second: jump_walk_spritesheet_35
-  - first:
-      213: 2105044644751810424
-    second: jump_walk_spritesheet_36
-  - first:
-      213: -655689375674838354
-    second: jump_walk_spritesheet_37
+      213: -3144487475305826812
+    second: animacao-idle (7)_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -148,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -237,221 +159,265 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jump_walk_spritesheet_0
+      name: animacao-idle (7)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 192
-        height: 192
+        x: 37
+        y: 206
+        width: 128
+        height: 159
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c15d0ccce064aad20800000000000000
-      internalID: 3290519507126244636
+      spriteID: da95e28ed77cb2360800000000000000
+      internalID: 7146024577333615021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_walk_spritesheet_1
+      name: animacao-idle (7)_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
-        width: 192
-        height: 192
+        x: 38
+        y: 194
+        width: 47
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fdedd6b1b1b4096e0800000000000000
-      internalID: -1832882468543406369
+      spriteID: c8f025855a2a2fb90800000000000000
+      internalID: -7209521222431666292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_walk_spritesheet_2
+      name: animacao-idle (7)_2
       rect:
         serializedVersion: 2
-        x: 384
-        y: 192
-        width: 192
-        height: 192
+        x: 233
+        y: 200
+        width: 124
+        height: 165
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9e4289b099c25070800000000000000
-      internalID: 8093753103763000986
+      spriteID: 9650dadc5bcd85580800000000000000
+      internalID: -8838071595316738711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_walk_spritesheet_3
+      name: animacao-idle (7)_3
       rect:
         serializedVersion: 2
-        x: 576
-        y: 192
-        width: 192
-        height: 192
+        x: 444
+        y: 206
+        width: 105
+        height: 158
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 967632698c3aea460800000000000000
-      internalID: 7254916131648137065
+      spriteID: 20bb4e6a82be38780800000000000000
+      internalID: -8681837096808957182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_walk_spritesheet_4
+      name: animacao-idle (7)_4
       rect:
         serializedVersion: 2
-        x: 768
-        y: 192
-        width: 192
-        height: 192
+        x: 628
+        y: 205
+        width: 113
+        height: 157
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c56832ee9a18d5000800000000000000
-      internalID: 26319739678852700
+      spriteID: 162feb3823ba25290800000000000000
+      internalID: -7903066162634755487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_walk_spritesheet_5
+      name: animacao-idle (7)_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 192
-        height: 192
+        x: 806
+        y: 199
+        width: 127
+        height: 158
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8bcd38cb4f0adf150800000000000000
-      internalID: 5908055259175181496
+      spriteID: 5376492630fbcc860800000000000000
+      internalID: 7551620696453179189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_walk_spritesheet_6
+      name: animacao-idle (7)_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 192
-        height: 192
+        x: 38
+        y: 3
+        width: 127
+        height: 162
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b718728f95ea21560800000000000000
-      internalID: 7283075248850174331
+      spriteID: 0551a4bc1cf1558e0800000000000000
+      internalID: -1705421966690085552
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_walk_spritesheet_7
+      name: animacao-idle (7)_7
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 192
-        height: 192
+        x: 240
+        y: 14
+        width: 117
+        height: 156
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73f8f784d4293ace0800000000000000
-      internalID: -1395110598928265417
+      spriteID: 67dd4e72b8ce6c270800000000000000
+      internalID: 8270557848126414198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_walk_spritesheet_8
+      name: animacao-idle (7)_8
       rect:
         serializedVersion: 2
-        x: 576
-        y: 0
-        width: 192
-        height: 192
+        x: 444
+        y: 14
+        width: 105
+        height: 158
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62ec6d93fdc19ebb0800000000000000
-      internalID: -4906358573969781210
+      spriteID: 7819d4f4bbb2fa9b0800000000000000
+      internalID: -5066782972279156345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_walk_spritesheet_9
+      name: animacao-idle (7)_9
       rect:
         serializedVersion: 2
-        x: 768
-        y: 0
-        width: 192
-        height: 192
+        x: 619
+        y: 10
+        width: 122
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0003f8e29202eefb0800000000000000
-      internalID: -4616717206761295872
+      spriteID: 2546ee7e4d02b6ee0800000000000000
+      internalID: -1266882771378346926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (7)_10
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 14
+        width: 128
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f32f4f1518d1be70800000000000000
+      internalID: 9129315504887899127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animacao-idle (7)_11
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 2
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4063bb92d498c54d0800000000000000
+      internalID: -3144487475305826812
       vertices: []
       indices: 
       edges: []
@@ -460,7 +426,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 587c07d31967eaac9babc40836174987
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -468,20 +434,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":2.0},"gridSpriteSize":{"x":192.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      jump_walk_spritesheet_0: 3290519507126244636
-      jump_walk_spritesheet_1: -1832882468543406369
-      jump_walk_spritesheet_2: 8093753103763000986
-      jump_walk_spritesheet_3: 7254916131648137065
-      jump_walk_spritesheet_4: 26319739678852700
-      jump_walk_spritesheet_5: 5908055259175181496
-      jump_walk_spritesheet_6: 7283075248850174331
-      jump_walk_spritesheet_7: -1395110598928265417
-      jump_walk_spritesheet_8: -4906358573969781210
-      jump_walk_spritesheet_9: -4616717206761295872
+      animacao-idle (7)_0: 7146024577333615021
+      animacao-idle (7)_1: -7209521222431666292
+      animacao-idle (7)_10: 9129315504887899127
+      animacao-idle (7)_11: -3144487475305826812
+      animacao-idle (7)_2: -8838071595316738711
+      animacao-idle (7)_3: -8681837096808957182
+      animacao-idle (7)_4: -7903066162634755487
+      animacao-idle (7)_5: 7551620696453179189
+      animacao-idle (7)_6: -1705421966690085552
+      animacao-idle (7)_7: 8270557848126414198
+      animacao-idle (7)_8: -5066782972279156345
+      animacao-idle (7)_9: -1266882771378346926
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
