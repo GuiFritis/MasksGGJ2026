@@ -131,7 +131,8 @@ GameObject:
   - component: {fileID: 552268311}
   - component: {fileID: 552268310}
   - component: {fileID: 552268309}
-  m_Layer: 0
+  - component: {fileID: 552268313}
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,6 +286,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &552268313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552268308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6f239f1f9d2b14e914bece89c9be64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TraversableObject
 --- !u!1 &669451722
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,6 +311,7 @@ GameObject:
   - component: {fileID: 669451725}
   - component: {fileID: 669451724}
   - component: {fileID: 669451723}
+  - component: {fileID: 669451728}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -329,7 +343,6 @@ MonoBehaviour:
   _jumpLimiter: 0.05
   _feetBoxOffset: {x: 0, y: 0.52}
   _feetBoxSize: {x: 0.95, y: 0.15}
-  _ghostTime: 3
 --- !u!61 &669451724
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -478,6 +491,22 @@ Transform:
   - {fileID: 1273525631}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &669451728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669451722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85057e1fab26484429d71e9fc4c05c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBase
+  _deathLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  _isUsingGhostMask: 1
 --- !u!1 &1273525630
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,8 +552,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2537c99d485dddc4dbf2e6ccc330541d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskSkillGhost
-  _maskSO: {fileID: 0}
-  _playerMovement: {fileID: 0}
+  _maskSO: {fileID: 11400000, guid: daa187e0a17bc394d9f40fb62ad50c72, type: 2}
+  _playerMovement: {fileID: 669451723}
 --- !u!114 &1273525633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -643,7 +672,7 @@ GameObject:
   - component: {fileID: 1872115068}
   - component: {fileID: 1872115067}
   - component: {fileID: 1872115066}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}

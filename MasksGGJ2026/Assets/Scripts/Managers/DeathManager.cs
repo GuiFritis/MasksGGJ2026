@@ -14,7 +14,7 @@ public class DeathManager : MonoBehaviour
         _player = GetComponent<PlayerBase>();
         _player.OnDeath += HandleDeath;
     }
-
+    
     private void HandleDeath()
     {
         _uiFadeOut.FadeOut(() =>
