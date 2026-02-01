@@ -38,10 +38,10 @@ public class Dodo : MonoBehaviour
     {        
         if (!_isRecovering)
         {
-            _originalPosition = _rigidbody.position;
-            
             SFX_Pool.Instance.Play(_audioSO);
-            
+
+            _originalPosition = _rigidbody.position;
+
             _rigidbody.AddForce(_knockdown * Vector2.down, ForceMode2D.Impulse);
 
             _isRecovering = true;
