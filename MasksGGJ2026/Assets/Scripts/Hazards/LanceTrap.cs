@@ -13,6 +13,8 @@ public class LanceTrap : MonoBehaviour
     public float shrinkTime = 0.5f;
     public float activeTime = 1f;
 
+    private float _elapsed;
+
     private bool _isTimeFrozen;
 
     [Header("Growth")]
@@ -21,7 +23,6 @@ public class LanceTrap : MonoBehaviour
 
     private Vector3 _startScale;
     private Vector3 _endScale;
-    private Collider2D col;
     
     private void OnEnable()
     {
@@ -35,9 +36,6 @@ public class LanceTrap : MonoBehaviour
 
     void Start()
     {
-        col = GetComponent<Collider2D>();
-        col.enabled = false;
-
         direction = direction.normalized;
 
         _startScale = transform.localScale;
@@ -54,36 +52,52 @@ public class LanceTrap : MonoBehaviour
     IEnumerator LanceRoutine()
     {
         float delay = isOdd ? oddDelay : evenDelay;
+        
         while (true)
         {    
-            yield return new WaitForSeconds(delay);
+            yield return WaitTime(delay);
 
             yield return ScaleLance(_startScale, _endScale, growTime);
-            col.enabled = true;
 
-            yield return new WaitForSeconds(activeTime);
+            yield return WaitTime(activeTime);
 
-            col.enabled = false;
             yield return ScaleLance(_endScale, _startScale, shrinkTime);
         }
     }
 
     IEnumerator ScaleLance(Vector3 from, Vector3 to, float time)
     {
-            float elapsed = 0f;
+        _elapsed = 0f;
 
-        while (elapsed < time)
+        while (_elapsed < time)
         {
-            float t = elapsed / time;
+            yield return new WaitWhile(() => _isTimeFrozen);
+            
+            float t = _elapsed / time;
             transform.localScale = Vector3.Lerp(from, to, t);
 
-            elapsed += Time.deltaTime;
+            _elapsed += Time.deltaTime;
+
             yield return null;
         }
 
         transform.localScale = to;
     }
 
+    IEnumerator WaitTime(float seconds)
+    {
+        float elapsed = 0f;
+
+        while (elapsed < seconds)
+        {
+            yield return new WaitWhile(() => _isTimeFrozen);
+
+            elapsed += Time.deltaTime;
+            
+            yield return null;
+        }
+    }
+    
     private void AlternateTime(bool isTimeFrozen)
     {
         _isTimeFrozen = isTimeFrozen;
