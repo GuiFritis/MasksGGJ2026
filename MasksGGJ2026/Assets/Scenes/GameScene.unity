@@ -3912,7 +3912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskSkillGhost
   _maskSO: {fileID: 11400000, guid: daa187e0a17bc394d9f40fb62ad50c72, type: 2}
-  _playerBase: {fileID: 0}
+  _playerBase: {fileID: 1422212066}
 --- !u!1 &1371357084
 GameObject:
   m_ObjectHideFlags: 0
@@ -4099,6 +4099,10 @@ PrefabInstance:
       propertyPath: '_maskSkills.Array.data[3]'
       value: 
       objectReference: {fileID: 1361637572}
+    - target: {fileID: 7779102724044282132, guid: 6b3a30c4877a6c46a9e79dd51b2c1ab8, type: 3}
+      propertyPath: _playerBase
+      value: 
+      objectReference: {fileID: 1422212066}
     - target: {fileID: 7816462868443248390, guid: 6b3a30c4877a6c46a9e79dd51b2c1ab8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.45
@@ -4156,6 +4160,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7816462868443248390, guid: 6b3a30c4877a6c46a9e79dd51b2c1ab8, type: 3}
   m_PrefabInstance: {fileID: 1422212064}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1422212066 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 642313481781303817, guid: 6b3a30c4877a6c46a9e79dd51b2c1ab8, type: 3}
+  m_PrefabInstance: {fileID: 1422212064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85057e1fab26484429d71e9fc4c05c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBase
 --- !u!1 &1445419989
 GameObject:
   m_ObjectHideFlags: 0
