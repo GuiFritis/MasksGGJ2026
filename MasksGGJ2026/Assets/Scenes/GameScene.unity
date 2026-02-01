@@ -1263,6 +1263,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3022056773483558254, guid: 1968771c7f39f044f8902bb884b7d7da, type: 3}
   m_PrefabInstance: {fileID: 1280305046}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1361637566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1461975091388362579, guid: 6b3a30c4877a6c46a9e79dd51b2c1ab8, type: 3}
+  m_PrefabInstance: {fileID: 1422212064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1361637571 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2344276071756403059, guid: 6b3a30c4877a6c46a9e79dd51b2c1ab8, type: 3}
+  m_PrefabInstance: {fileID: 1422212064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361637566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3b65c3111354445a81fd6d91bdbf81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaskSkillTeleport
+--- !u!114 &1361637572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361637566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2537c99d485dddc4dbf2e6ccc330541d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaskSkillGhost
+  _maskSO: {fileID: 11400000, guid: daa187e0a17bc394d9f40fb62ad50c72, type: 2}
+  _playerMovement: {fileID: 1950794110}
 --- !u!1 &1371357084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,6 +1471,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 304144107985958935, guid: 6b3a30c4877a6c46a9e79dd51b2c1ab8, type: 3}
+      propertyPath: '_maskSkills.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1361637571}
+    - target: {fileID: 304144107985958935, guid: 6b3a30c4877a6c46a9e79dd51b2c1ab8, type: 3}
+      propertyPath: '_maskSkills.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1361637572}
     - target: {fileID: 7816462868443248390, guid: 6b3a30c4877a6c46a9e79dd51b2c1ab8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.45
@@ -1488,7 +1526,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1461975091388362579, guid: 6b3a30c4877a6c46a9e79dd51b2c1ab8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1361637572}
   m_SourcePrefab: {fileID: 100100000, guid: 6b3a30c4877a6c46a9e79dd51b2c1ab8, type: 3}
 --- !u!4 &1422212065 stripped
 Transform:
@@ -3847,6 +3888,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad172afe9f007dca5b9393cc974e3431, type: 3}
+--- !u!114 &1950794110 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3611315426934052477, guid: 6b3a30c4877a6c46a9e79dd51b2c1ab8, type: 3}
+  m_PrefabInstance: {fileID: 1422212064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f8f1ece36377e48b0274ed0c71685e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
 --- !u!1 &2042322332
 GameObject:
   m_ObjectHideFlags: 0
