@@ -10,6 +10,15 @@ public class PlayerBase : MonoBehaviour
     private static Animator _playerAnimator;
     public static Animator PlayerAnimator => _playerAnimator;
 
+    private void OnValidate()
+    {
+        if(_playerAnimator == null)
+        {
+            _playerAnimator = GetComponentInChildren<Animator>();
+            Debug.Log(_playerAnimator);
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if ((_deathLayer.value & (1 << collision.gameObject.layer)) != 0)
