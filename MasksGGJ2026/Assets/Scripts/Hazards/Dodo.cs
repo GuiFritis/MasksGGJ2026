@@ -12,7 +12,7 @@ public class Dodo : MonoBehaviour
     private bool _isTimeFrozen;
     private bool _isRecovering = false;
 
-    void  OnValidate()
+    void OnValidate()
     {
         if (_rigidbody == null)
         {
@@ -39,6 +39,9 @@ public class Dodo : MonoBehaviour
         if (!_isRecovering)
         {
             SFX_Pool.Instance.Play(_audioSO);
+
+            _originalPosition = _rigidbody.position;
+
             _rigidbody.AddForce(_knockdown * Vector2.down, ForceMode2D.Impulse);
 
             _isRecovering = true;
