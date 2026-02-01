@@ -148,7 +148,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -240,12 +240,12 @@ TextureImporter:
       name: jump_walk_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 261
-        width: 30
-        height: 30
+        x: 0
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -262,12 +262,12 @@ TextureImporter:
       name: jump_walk_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 55
-        y: 206
-        width: 85
-        height: 175
+        x: 192
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -284,12 +284,12 @@ TextureImporter:
       name: jump_walk_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 133
-        y: 261
-        width: 30
-        height: 30
+        x: 384
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -306,12 +306,12 @@ TextureImporter:
       name: jump_walk_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 220
-        y: 261
-        width: 31
-        height: 31
+        x: 576
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -328,12 +328,12 @@ TextureImporter:
       name: jump_walk_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 246
-        y: 206
-        width: 88
-        height: 174
+        x: 768
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -350,12 +350,12 @@ TextureImporter:
       name: jump_walk_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 325
-        y: 261
-        width: 31
-        height: 31
+        x: 0
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -372,12 +372,12 @@ TextureImporter:
       name: jump_walk_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 411
-        y: 263
-        width: 30
-        height: 30
+        x: 192
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -394,12 +394,12 @@ TextureImporter:
       name: jump_walk_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 442
-        y: 208
-        width: 88
-        height: 171
+        x: 384
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -416,12 +416,12 @@ TextureImporter:
       name: jump_walk_spritesheet_8
       rect:
         serializedVersion: 2
-        x: 519
-        y: 263
-        width: 30
-        height: 30
+        x: 576
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -438,12 +438,12 @@ TextureImporter:
       name: jump_walk_spritesheet_9
       rect:
         serializedVersion: 2
-        x: 600
-        y: 266
-        width: 30
-        height: 30
+        x: 768
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -456,627 +456,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 634
-        y: 211
-        width: 95
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eca62ff1ea1e3d440800000000000000
-      internalID: 4959555752641587918
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_11
-      rect:
-        serializedVersion: 2
-        x: 714
-        y: 266
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85aa5fa954e978720800000000000000
-      internalID: 2848419311124851288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_12
-      rect:
-        serializedVersion: 2
-        x: 786
-        y: 271
-        width: 31
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 52af561a8ffedcc30800000000000000
-      internalID: 4381421863640103461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_13
-      rect:
-        serializedVersion: 2
-        x: 826
-        y: 219
-        width: 107
-        height: 153
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 39aefc9291bc3e280800000000000000
-      internalID: -9015138720129488237
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_14
-      rect:
-        serializedVersion: 2
-        x: 911
-        y: 271
-        width: 31
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5b6dee758d57e8160800000000000000
-      internalID: 7029685640420578997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_15
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 204
-        width: 50
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4a99affa3583815f0800000000000000
-      internalID: -785816202890274396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_16
-      rect:
-        serializedVersion: 2
-        x: 618
-        y: 201
-        width: 51
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 521fcd083d8a65500800000000000000
-      internalID: 384680444540285221
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_17
-      rect:
-        serializedVersion: 2
-        x: 798
-        y: 196
-        width: 50
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 74f5ba419e3185000800000000000000
-      internalID: 24791689745620807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_18
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 85
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1254d7d5ed11d2ad0800000000000000
-      internalID: -2725502552740379359
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_19
-      rect:
-        serializedVersion: 2
-        x: 58
-        y: 33
-        width: 80
-        height: 147
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: df8b839373a29b220800000000000000
-      internalID: 2502077484652607741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_20
-      rect:
-        serializedVersion: 2
-        x: 149
-        y: 85
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 572a13d2bc9c83c20800000000000000
-      internalID: 3186518610838397557
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_21
-      rect:
-        serializedVersion: 2
-        x: 206
-        y: 84
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fe6feb0ea51626b90800000000000000
-      internalID: -7250125407167514897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_22
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 34
-        width: 115
-        height: 151
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b54f977433314b3f0800000000000000
-      internalID: -886062115721710501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_23
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 84
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7547ecbbd108f42e0800000000000000
-      internalID: -2139350432784419753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_24
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 81
-        width: 31
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 58c090a02cce5cea0800000000000000
-      internalID: -5853011822561915771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_25
-      rect:
-        serializedVersion: 2
-        x: 442
-        y: 30
-        width: 111
-        height: 157
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7dd0c8505ea6aef20800000000000000
-      internalID: 3452689596206026199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_26
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 81
-        width: 31
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 12e1530e27d3ff3a0800000000000000
-      internalID: -6629512562868937183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_27
-      rect:
-        serializedVersion: 2
-        x: 596
-        y: 77
-        width: 31
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c475ed577f57a0b0800000000000000
-      internalID: -5717496235642489660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_28
-      rect:
-        serializedVersion: 2
-        x: 634
-        y: 24
-        width: 103
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: de547cb9997b43e60800000000000000
-      internalID: 7941173913332434413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_29
-      rect:
-        serializedVersion: 2
-        x: 717
-        y: 77
-        width: 31
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 74957d5b83a3b78b0800000000000000
-      internalID: -5153461333352031929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_30
-      rect:
-        serializedVersion: 2
-        x: 797
-        y: 69
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8878b88d3eb492830800000000000000
-      internalID: 4046849182131783560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_31
-      rect:
-        serializedVersion: 2
-        x: 823
-        y: 14
-        width: 85
-        height: 175
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46c7566757ab1c0a0800000000000000
-      internalID: -6862999343475622812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_32
-      rect:
-        serializedVersion: 2
-        x: 901
-        y: 69
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a8d59673bbc7ce0b0800000000000000
-      internalID: -5698042285000139382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_33
-      rect:
-        serializedVersion: 2
-        x: 20
-        y: 1
-        width: 47
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: deff4dd165d9668b0800000000000000
-      internalID: -5159263329913077779
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_34
-      rect:
-        serializedVersion: 2
-        x: 125
-        y: 35
-        width: 50
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9206139467b13b0b0800000000000000
-      internalID: -5714193307354963927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_35
-      rect:
-        serializedVersion: 2
-        x: 213
-        y: 1
-        width: 48
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed5b9bce12869b620800000000000000
-      internalID: 2790375939047536094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_36
-      rect:
-        serializedVersion: 2
-        x: 409
-        y: 2
-        width: 50
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87f15ce83fe963d10800000000000000
-      internalID: 2105044644751810424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_walk_spritesheet_37
-      rect:
-        serializedVersion: 2
-        x: 610
-        y: 5
-        width: 51
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ea257ef9cf586e6f0800000000000000
-      internalID: -655689375674838354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 587c07d31967eaac9babc40836174987
     internalID: 0
     vertices: []
     indices: 
@@ -1084,40 +468,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":2.0},"gridSpriteSize":{"x":192.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       jump_walk_spritesheet_0: 3290519507126244636
       jump_walk_spritesheet_1: -1832882468543406369
-      jump_walk_spritesheet_10: 4959555752641587918
-      jump_walk_spritesheet_11: 2848419311124851288
-      jump_walk_spritesheet_12: 4381421863640103461
-      jump_walk_spritesheet_13: -9015138720129488237
-      jump_walk_spritesheet_14: 7029685640420578997
-      jump_walk_spritesheet_15: -785816202890274396
-      jump_walk_spritesheet_16: 384680444540285221
-      jump_walk_spritesheet_17: 24791689745620807
-      jump_walk_spritesheet_18: -2725502552740379359
-      jump_walk_spritesheet_19: 2502077484652607741
       jump_walk_spritesheet_2: 8093753103763000986
-      jump_walk_spritesheet_20: 3186518610838397557
-      jump_walk_spritesheet_21: -7250125407167514897
-      jump_walk_spritesheet_22: -886062115721710501
-      jump_walk_spritesheet_23: -2139350432784419753
-      jump_walk_spritesheet_24: -5853011822561915771
-      jump_walk_spritesheet_25: 3452689596206026199
-      jump_walk_spritesheet_26: -6629512562868937183
-      jump_walk_spritesheet_27: -5717496235642489660
-      jump_walk_spritesheet_28: 7941173913332434413
-      jump_walk_spritesheet_29: -5153461333352031929
       jump_walk_spritesheet_3: 7254916131648137065
-      jump_walk_spritesheet_30: 4046849182131783560
-      jump_walk_spritesheet_31: -6862999343475622812
-      jump_walk_spritesheet_32: -5698042285000139382
-      jump_walk_spritesheet_33: -5159263329913077779
-      jump_walk_spritesheet_34: -5714193307354963927
-      jump_walk_spritesheet_35: 2790375939047536094
-      jump_walk_spritesheet_36: 2105044644751810424
-      jump_walk_spritesheet_37: -655689375674838354
       jump_walk_spritesheet_4: 26319739678852700
       jump_walk_spritesheet_5: 5908055259175181496
       jump_walk_spritesheet_6: 7283075248850174331

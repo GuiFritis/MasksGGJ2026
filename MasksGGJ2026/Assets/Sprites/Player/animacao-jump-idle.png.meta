@@ -124,7 +124,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -216,12 +216,12 @@ TextureImporter:
       name: animacao-jump-idle_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 261
-        width: 30
-        height: 30
+        x: 0
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,12 +238,12 @@ TextureImporter:
       name: animacao-jump-idle_1
       rect:
         serializedVersion: 2
-        x: 55
-        y: 206
-        width: 85
-        height: 174
+        x: 192
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: animacao-jump-idle_2
       rect:
         serializedVersion: 2
-        x: 133
-        y: 261
-        width: 30
-        height: 30
+        x: 384
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -282,12 +282,12 @@ TextureImporter:
       name: animacao-jump-idle_3
       rect:
         serializedVersion: 2
-        x: 220
-        y: 261
-        width: 31
-        height: 31
+        x: 576
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -304,12 +304,12 @@ TextureImporter:
       name: animacao-jump-idle_4
       rect:
         serializedVersion: 2
-        x: 245
-        y: 207
-        width: 89
-        height: 173
+        x: 768
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -326,12 +326,12 @@ TextureImporter:
       name: animacao-jump-idle_5
       rect:
         serializedVersion: 2
-        x: 325
-        y: 261
-        width: 31
-        height: 31
+        x: 0
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -348,12 +348,12 @@ TextureImporter:
       name: animacao-jump-idle_6
       rect:
         serializedVersion: 2
-        x: 411
-        y: 263
-        width: 30
-        height: 30
+        x: 192
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -370,12 +370,12 @@ TextureImporter:
       name: animacao-jump-idle_7
       rect:
         serializedVersion: 2
-        x: 432
-        y: 210
-        width: 100
-        height: 169
+        x: 384
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -392,12 +392,12 @@ TextureImporter:
       name: animacao-jump-idle_8
       rect:
         serializedVersion: 2
-        x: 519
-        y: 263
-        width: 30
-        height: 30
+        x: 576
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -414,12 +414,12 @@ TextureImporter:
       name: animacao-jump-idle_9
       rect:
         serializedVersion: 2
-        x: 600
-        y: 266
-        width: 30
-        height: 30
+        x: 768
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -432,451 +432,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_10
-      rect:
-        serializedVersion: 2
-        x: 613
-        y: 216
-        width: 121
-        height: 161
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9dac6dee87bc0a840800000000000000
-      internalID: 5233406487268084441
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_11
-      rect:
-        serializedVersion: 2
-        x: 714
-        y: 266
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ced9a4291babd2630800000000000000
-      internalID: 3903981723826429420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_12
-      rect:
-        serializedVersion: 2
-        x: 786
-        y: 225
-        width: 121
-        height: 147
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5851637db44980ec0800000000000000
-      internalID: -3600464848628607611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_13
-      rect:
-        serializedVersion: 2
-        x: 894
-        y: 230
-        width: 50
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 84630e3059a1b3e00800000000000000
-      internalID: 1025442567474394696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_14
-      rect:
-        serializedVersion: 2
-        x: 911
-        y: 271
-        width: 31
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b939666d594633ea0800000000000000
-      internalID: -5894256892587895909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_15
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 49
-        width: 47
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 595c3a520d8341fe0800000000000000
-      internalID: -1219287132474718827
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_16
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 33
-        width: 79
-        height: 147
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ea0134d6dbe8e6060800000000000000
-      internalID: 6948648219312328878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_17
-      rect:
-        serializedVersion: 2
-        x: 141
-        y: 51
-        width: 50
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5279a17c70866b700800000000000000
-      internalID: 555745986641303333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_18
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 46
-        width: 48
-        height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e9067cf94ad555d60800000000000000
-      internalID: 7878306084791214238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_19
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 38
-        width: 79
-        height: 147
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b04964542dff9e2f0800000000000000
-      internalID: -942941368386939893
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_20
-      rect:
-        serializedVersion: 2
-        x: 330
-        y: 49
-        width: 50
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c14cda91b24186800800000000000000
-      internalID: 605756325228299292
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_21
-      rect:
-        serializedVersion: 2
-        x: 397
-        y: 41
-        width: 49
-        height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0001950b36e553750800000000000000
-      internalID: 6284032637318795264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_22
-      rect:
-        serializedVersion: 2
-        x: 444
-        y: 41
-        width: 79
-        height: 146
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 06857d7dcaf160770800000000000000
-      internalID: 8576577367589738592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_23
-      rect:
-        serializedVersion: 2
-        x: 516
-        y: 43
-        width: 50
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 19c94be52c21a4610800000000000000
-      internalID: 1606116843132853393
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_24
-      rect:
-        serializedVersion: 2
-        x: 596
-        y: 77
-        width: 31
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a36ce28b04d87bb60800000000000000
-      internalID: 7761827791903835706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_25
-      rect:
-        serializedVersion: 2
-        x: 602
-        y: 31
-        width: 144
-        height: 157
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f8cfd981d396f1eb0800000000000000
-      internalID: -4746959771098284913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_26
-      rect:
-        serializedVersion: 2
-        x: 717
-        y: 77
-        width: 31
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c746a22b9b7063a0800000000000000
-      internalID: -6674198741531605054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_27
-      rect:
-        serializedVersion: 2
-        x: 797
-        y: 69
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4a2fbfb7d23337f60800000000000000
-      internalID: 8030818830978380452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_28
-      rect:
-        serializedVersion: 2
-        x: 823
-        y: 14
-        width: 85
-        height: 174
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b7aedc2618a54d620800000000000000
-      internalID: 2797960780258863739
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animacao-jump-idle_29
-      rect:
-        serializedVersion: 2
-        x: 901
-        y: 69
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8e6ca10ee03f677c0800000000000000
-      internalID: -4073801567695091992
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f7c7cbc57d54bfb50b2ae7426f665199
     internalID: 0
     vertices: []
     indices: 
@@ -884,31 +444,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":2.0},"gridSpriteSize":{"x":192.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       animacao-jump-idle_0: 615107687743796590
       animacao-jump-idle_1: 8940860262649507212
-      animacao-jump-idle_10: 5233406487268084441
-      animacao-jump-idle_11: 3903981723826429420
-      animacao-jump-idle_12: -3600464848628607611
-      animacao-jump-idle_13: 1025442567474394696
-      animacao-jump-idle_14: -5894256892587895909
-      animacao-jump-idle_15: -1219287132474718827
-      animacao-jump-idle_16: 6948648219312328878
-      animacao-jump-idle_17: 555745986641303333
-      animacao-jump-idle_18: 7878306084791214238
-      animacao-jump-idle_19: -942941368386939893
       animacao-jump-idle_2: -3487245215508196966
-      animacao-jump-idle_20: 605756325228299292
-      animacao-jump-idle_21: 6284032637318795264
-      animacao-jump-idle_22: 8576577367589738592
-      animacao-jump-idle_23: 1606116843132853393
-      animacao-jump-idle_24: 7761827791903835706
-      animacao-jump-idle_25: -4746959771098284913
-      animacao-jump-idle_26: -6674198741531605054
-      animacao-jump-idle_27: 8030818830978380452
-      animacao-jump-idle_28: 2797960780258863739
-      animacao-jump-idle_29: -4073801567695091992
       animacao-jump-idle_3: -1004713652364117315
       animacao-jump-idle_4: -9109436508139071041
       animacao-jump-idle_5: -1620017053834208967
