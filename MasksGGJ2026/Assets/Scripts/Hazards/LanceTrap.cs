@@ -13,6 +13,8 @@ public class SpikeTrap : MonoBehaviour
     public float downTime = 0.5f;
     public float activeTime = 1f;
 
+    private bool _isTimeFrozen;
+
     [Header("Movement")]
     public Vector2 direction = Vector2.up;
     public float distance = 1f;
@@ -20,6 +22,16 @@ public class SpikeTrap : MonoBehaviour
     private Vector3 startPos;
     private Vector3 endPos;
     private Collider2D col;
+    
+    private void OnEnable()
+    {
+        MaskSkillFreezeTime.OnFreezeTime += AlternateTime;
+    }
+
+    private void OnDisable()
+    {
+        MaskSkillFreezeTime.OnFreezeTime -= AlternateTime;
+    }
 
     void Start()
     {
@@ -35,32 +47,38 @@ public class SpikeTrap : MonoBehaviour
     IEnumerator SpikeRoutine()
     {
         float delay = isOdd ? oddDelay : evenDelay;
-
         while (true)
-        {
+        {    
             yield return new WaitForSeconds(delay);
 
-            yield return MoveSpike(startPos, endPos, upTime);
-            col.enabled = true;
+                yield return MoveSpike(startPos, endPos, upTime);
+                col.enabled = true;
 
             yield return new WaitForSeconds(activeTime);
 
-            col.enabled = false;
-            yield return MoveSpike(endPos, startPos, downTime);
+                yield return MoveSpike(endPos, startPos, downTime);
+                col.enabled = false;
         }
     }
 
     IEnumerator MoveSpike(Vector3 from, Vector3 to, float time)
     {
-        float elapsed = 0f;
+            float elapsed = 0f;
 
-        while (elapsed < time)
-        {
-            transform.position = Vector3.Lerp(from, to, elapsed / time);
-            elapsed += Time.deltaTime;
-            yield return null;
-        }
+            while (elapsed < time)
+            {
+                transform.position = Vector3.Lerp(from, to, elapsed / time);
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
 
-        transform.position = to;
+            if (!_isTimeFrozen) {
+                transform.position = to;
+            }
     }
+
+    private void AlternateTime(bool isTimeFrozen)
+    {
+        _isTimeFrozen = isTimeFrozen;
+    }    
 }

@@ -48,7 +48,7 @@ public class PlayerBase : MonoBehaviour
         PlayerMaskManager.spendCharge?.Invoke();
     }
 
-    public void ActiveGhost() {
+    private void ActiveGhost() {
         StartCoroutine(GhostTimer());
         MaskSkillGhost.OnGhostActive?.Invoke(true);
     }
@@ -59,7 +59,7 @@ public class PlayerBase : MonoBehaviour
         MaskSkillGhost.OnGhostActive?.Invoke(false);
     }
     #endregion
-    
+
     #region DEATH
     private void Die()
     {
