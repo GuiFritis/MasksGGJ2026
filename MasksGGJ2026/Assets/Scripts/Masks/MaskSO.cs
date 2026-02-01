@@ -8,6 +8,7 @@ public class MaskSO : ScriptableObject
     public Sprite sprite;
     public int charges;
     public EMaskSkill eMaskSkill;
+    public AnimatorOverrideController _animatorOverride;
 }
 
 public enum EMaskSkill

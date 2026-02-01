@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MaskDoubleJumpOverride
+  m_Controller: {fileID: 9100000, guid: 60010244b7a150350941e99b60748194, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 9076e64630f7aadbf97bb14c15eb0c7d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 10e6756bd877a49e18444a53f6fbd867, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 189a49508c8e8eac8929b32aee8dd060, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c55f7ed46d2f8e5e28d495c8ba6473aa, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e06923a8f1cd37393974cefdf46cde8a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: beec54ab9cf04c7f6940179f07f36d54, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2a46ae3aeab97b55f927ad52082f2ed8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f8cdf3fb39fc20b728bd8f25f4d3a49d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 01a53a7709cde11a6849df1115ed4aab, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f38ec294b21d75d44899cc1f4cb37aa3, type: 2}
