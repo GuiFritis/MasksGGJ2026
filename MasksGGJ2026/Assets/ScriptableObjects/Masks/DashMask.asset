@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MaskSO
   maskName: Mask of Swiftness
   description: Allows it's bearer to move swiftly as the wind
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: a53ddcb00df4d674ba95e3a219e3633f, type: 3}
   charges: 3
   eMaskSkill: 1
-  _animatorOverride: {fileID: 22100000, guid: 570cce9cdaf1195bbb2c2a3af3556e06, type: 2}
+  animatorOverride: {fileID: 22100000, guid: 532766b8deca88bd4b47749a858d292e, type: 2}

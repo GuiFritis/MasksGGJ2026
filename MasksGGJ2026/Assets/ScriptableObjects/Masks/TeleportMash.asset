@@ -15,7 +15,7 @@ MonoBehaviour:
   maskName: Mask of Reality
   description: Allows it's bearer to shape reality, switching places with an object
     in sight
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 85b21c9a8c06a554787432d9d42d7190, type: 3}
   charges: 2
   eMaskSkill: 2
-  _animatorOverride: {fileID: 22100000, guid: acdc4f4ea0c8ddce2b73d2e404604aec, type: 2}
+  animatorOverride: {fileID: 22100000, guid: acdc4f4ea0c8ddce2b73d2e404604aec, type: 2}

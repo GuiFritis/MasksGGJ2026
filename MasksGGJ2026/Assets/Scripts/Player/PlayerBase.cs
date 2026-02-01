@@ -20,12 +20,7 @@ public class PlayerBase : MonoBehaviour
     void Awake()
     {
         _playerAnimator = _animator;
-        PlayerMaskManager.onMaskEquiped += EquipeMask;
-    }
-
-    private void EquipeMask(MaskSO mask)
-    {
-        _playerAnimator.runtimeAnimatorController = mask.animatorOverride;
+        _playerAnimator.runtimeAnimatorController = GameManager.Instance.SelectedMask.animatorOverride;
     }
 
     #region COLLISION
