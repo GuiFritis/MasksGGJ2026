@@ -28,11 +28,8 @@ public class PlayerBase : MonoBehaviour
 
     #region COLLISION
     private void OnCollisionEnter2D(Collision2D collision)
-    {                
-        if ((_deathLayer.value & (1 << collision.gameObject.layer)) != 0)
-        {
-            Die();
-        }
+    {        
+        CheckCollision(collision.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
