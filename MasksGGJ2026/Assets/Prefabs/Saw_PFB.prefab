@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6043843401907196488}
   - component: {fileID: 234985468195382804}
   - component: {fileID: 2073309630827182045}
+  - component: {fileID: 4845523079184139620}
   m_Layer: 0
   m_Name: Saw_PFB
   m_TagString: Untagged
@@ -114,3 +115,58 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!60 &4845523079184139620
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120424604792609825}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 6.4}
+    newSize: {x: 6.4, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.92834234, y: -0.007308364}
+      - {x: -0.6988516, y: -0.7105155}
+      - {x: 0.0020771027, y: -0.9268353}
+      - {x: 0.67646664, y: -0.7105078}
+      - {x: 0.9150006, y: 0.011092901}
+      - {x: 0.69017476, y: 0.6923051}
+      - {x: 0.0009903908, y: 0.814382}
+      - {x: -0.7093109, y: 0.6951046}
+  m_UseDelaunayMesh: 1
