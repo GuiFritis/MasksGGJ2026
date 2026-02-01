@@ -8,7 +8,7 @@ public class TotemManager : Singleton<TotemManager>
     private static readonly int ANIMATION_ID = Animator.StringToHash("TotemShow");
     [SerializeField] private List<SpriteRenderer> _totemParts;
     private List<MaskWin> _masks = new();
-    [SerializeField] UIFadeOut _uiFadeOut;
+    [SerializeField] UIFade _uiFade;
 
     protected override void Awake()
     {
@@ -26,7 +26,7 @@ public class TotemManager : Singleton<TotemManager>
                 _totemParts[i].transform.GetComponentInChildren<SpriteRenderer>().sprite = _masks[i].mask.sprite;
             }
         }
-        _uiFadeOut.FadeIn(() => _animator.SetTrigger(ANIMATION_ID));        
+        _uiFade.FadeIn(() => _animator.SetTrigger(ANIMATION_ID));        
     }
 
     public void AddMask(MaskSO mask, bool win)
