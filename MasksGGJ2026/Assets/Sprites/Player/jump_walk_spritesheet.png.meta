@@ -1,0 +1,489 @@
+fileFormatVersion: 2
+guid: 94ee8552971ea234891e14f2fd6c19f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3290519507126244636
+    second: jump_walk_spritesheet_0
+  - first:
+      213: -1832882468543406369
+    second: jump_walk_spritesheet_1
+  - first:
+      213: 8093753103763000986
+    second: jump_walk_spritesheet_2
+  - first:
+      213: 7254916131648137065
+    second: jump_walk_spritesheet_3
+  - first:
+      213: 26319739678852700
+    second: jump_walk_spritesheet_4
+  - first:
+      213: 5908055259175181496
+    second: jump_walk_spritesheet_5
+  - first:
+      213: 7283075248850174331
+    second: jump_walk_spritesheet_6
+  - first:
+      213: -1395110598928265417
+    second: jump_walk_spritesheet_7
+  - first:
+      213: -4906358573969781210
+    second: jump_walk_spritesheet_8
+  - first:
+      213: -4616717206761295872
+    second: jump_walk_spritesheet_9
+  - first:
+      213: 4959555752641587918
+    second: jump_walk_spritesheet_10
+  - first:
+      213: 2848419311124851288
+    second: jump_walk_spritesheet_11
+  - first:
+      213: 4381421863640103461
+    second: jump_walk_spritesheet_12
+  - first:
+      213: -9015138720129488237
+    second: jump_walk_spritesheet_13
+  - first:
+      213: 7029685640420578997
+    second: jump_walk_spritesheet_14
+  - first:
+      213: -785816202890274396
+    second: jump_walk_spritesheet_15
+  - first:
+      213: 384680444540285221
+    second: jump_walk_spritesheet_16
+  - first:
+      213: 24791689745620807
+    second: jump_walk_spritesheet_17
+  - first:
+      213: -2725502552740379359
+    second: jump_walk_spritesheet_18
+  - first:
+      213: 2502077484652607741
+    second: jump_walk_spritesheet_19
+  - first:
+      213: 3186518610838397557
+    second: jump_walk_spritesheet_20
+  - first:
+      213: -7250125407167514897
+    second: jump_walk_spritesheet_21
+  - first:
+      213: -886062115721710501
+    second: jump_walk_spritesheet_22
+  - first:
+      213: -2139350432784419753
+    second: jump_walk_spritesheet_23
+  - first:
+      213: -5853011822561915771
+    second: jump_walk_spritesheet_24
+  - first:
+      213: 3452689596206026199
+    second: jump_walk_spritesheet_25
+  - first:
+      213: -6629512562868937183
+    second: jump_walk_spritesheet_26
+  - first:
+      213: -5717496235642489660
+    second: jump_walk_spritesheet_27
+  - first:
+      213: 7941173913332434413
+    second: jump_walk_spritesheet_28
+  - first:
+      213: -5153461333352031929
+    second: jump_walk_spritesheet_29
+  - first:
+      213: 4046849182131783560
+    second: jump_walk_spritesheet_30
+  - first:
+      213: -6862999343475622812
+    second: jump_walk_spritesheet_31
+  - first:
+      213: -5698042285000139382
+    second: jump_walk_spritesheet_32
+  - first:
+      213: -5159263329913077779
+    second: jump_walk_spritesheet_33
+  - first:
+      213: -5714193307354963927
+    second: jump_walk_spritesheet_34
+  - first:
+      213: 2790375939047536094
+    second: jump_walk_spritesheet_35
+  - first:
+      213: 2105044644751810424
+    second: jump_walk_spritesheet_36
+  - first:
+      213: -655689375674838354
+    second: jump_walk_spritesheet_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jump_walk_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c15d0ccce064aad20800000000000000
+      internalID: 3290519507126244636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_walk_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdedd6b1b1b4096e0800000000000000
+      internalID: -1832882468543406369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_walk_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9e4289b099c25070800000000000000
+      internalID: 8093753103763000986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_walk_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967632698c3aea460800000000000000
+      internalID: 7254916131648137065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_walk_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c56832ee9a18d5000800000000000000
+      internalID: 26319739678852700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_walk_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bcd38cb4f0adf150800000000000000
+      internalID: 5908055259175181496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_walk_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b718728f95ea21560800000000000000
+      internalID: 7283075248850174331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_walk_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f8f784d4293ace0800000000000000
+      internalID: -1395110598928265417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_walk_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ec6d93fdc19ebb0800000000000000
+      internalID: -4906358573969781210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_walk_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0003f8e29202eefb0800000000000000
+      internalID: -4616717206761295872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 587c07d31967eaac9babc40836174987
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":2.0},"gridSpriteSize":{"x":192.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      jump_walk_spritesheet_0: 3290519507126244636
+      jump_walk_spritesheet_1: -1832882468543406369
+      jump_walk_spritesheet_2: 8093753103763000986
+      jump_walk_spritesheet_3: 7254916131648137065
+      jump_walk_spritesheet_4: 26319739678852700
+      jump_walk_spritesheet_5: 5908055259175181496
+      jump_walk_spritesheet_6: 7283075248850174331
+      jump_walk_spritesheet_7: -1395110598928265417
+      jump_walk_spritesheet_8: -4906358573969781210
+      jump_walk_spritesheet_9: -4616717206761295872
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
