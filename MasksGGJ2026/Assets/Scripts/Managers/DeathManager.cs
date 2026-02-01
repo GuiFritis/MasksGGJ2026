@@ -7,7 +7,7 @@ public class DeathManager : MonoBehaviour
     private PlayerBase _player;
 
     [SerializeField]
-    private UIFadeOut _uiFadeOut;
+    private UIFade _uiFade;
 
     void Awake()
     {
@@ -29,7 +29,7 @@ public class DeathManager : MonoBehaviour
 
     private void HandleDeath()
     {
-        _uiFadeOut.FadeOut(() =>
+        _uiFade.FadeOut(() =>
         {
             gameObject.SetActive(false);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

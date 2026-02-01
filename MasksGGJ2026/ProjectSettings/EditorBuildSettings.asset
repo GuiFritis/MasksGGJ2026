@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 22f2f8a1eb603fe42a5daf360cad322d
+  - enabled: 1
+    path: Assets/Scenes/ChooseMaskMenu.unity
+    guid: c5710197c820c2d43ad07b9826bc7c26
+  - enabled: 1
+    path: Assets/Scenes/TestGameScene.unity
+    guid: 1d1442a9d78952c4490cbe23d9e3e619
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 82298e06dab30ee478526b79f7bce2d0, type: 3}
   m_UseUCBPForAssetBundles: 0
