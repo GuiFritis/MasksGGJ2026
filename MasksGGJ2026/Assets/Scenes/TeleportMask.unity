@@ -940,6 +940,7 @@ MonoBehaviour:
   _jumpLimiter: 0.05
   _feetBoxOffset: {x: 0, y: 0.52}
   _feetBoxSize: {x: 0.95, y: 0.15}
+  _freezeTime: 3
   _throwablePrefab: {fileID: 1523190071805103005, guid: 34fdfb705ddbc2241a1bed47e03b2c61, type: 3}
   _throwPoint: {fileID: 472696757}
   _throwForce: 10
@@ -1130,7 +1131,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1292384503
+--- !u!1001 &1372498169
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2

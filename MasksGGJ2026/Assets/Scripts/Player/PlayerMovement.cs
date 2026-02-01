@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[DefaultExecutionOrder(-1)]
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D _rigdbody;
@@ -38,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 _feetBoxSize;
     private bool _grounded = true;
     public bool IsGrounded => _grounded;
+    
+    [Header("Freeze Time")]    
+    [SerializeField] private float _freezeTime = 3f;
 
     [Header("Throw action")]
     [SerializeField]
@@ -49,6 +53,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool _facingRight = true;
     private GameObject _activeProjectile;
+
+    [Header("Audio")]
+    [SerializeField] private AudioSO _jumpAudio;
+    [SerializeField] private AudioSO _dashAudio;
+    [SerializeField] private AudioSO _teleportAudio;
+    [SerializeField] private AudioSO _freezeTimeAudio;
 
     void OnValidate()
     {
@@ -74,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        //PlayerBase.PlayerAnimator.SetFloat(WALK_ID, MathF.Min(_rigdbody.linearVelocityX, 1f));
+        PlayerBase.PlayerAnimator.SetFloat(WALK_ID, MathF.Min(Mathf.Abs(_rigdbody.linearVelocityX), 1f));
         _jumpLimiterCounter -= Time.fixedDeltaTime;
 
         if (_direction != 0f && !_isDashing)
@@ -123,7 +133,8 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         _rigdbody.AddForce(_direction * _playerSpeed * Time.deltaTime * Vector2.right, ForceMode2D.Force);
-        if (Mathf.Abs(_rigdbody.linearVelocityX) > _maxSpeed)
+        
+        if(Mathf.Abs(_rigdbody.linearVelocityX) > _maxSpeed)
         {
             _rigdbody.linearVelocityX = _maxSpeed * Mathf.Sign(_rigdbody.linearVelocityX);
         }
@@ -147,7 +158,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_direction != 0 && !_isDashing)
         {
-            //PlayerBase.PlayerAnimator.SetTrigger(DASH_ID);
+            SFX_Pool.Instance.Play(_dashAudio);
+            PlayerBase.PlayerAnimator.SetTrigger(DASH_ID);
             _isDashing = true;
             PlayerMaskManager.spendCharge?.Invoke();
             _rigdbody.gravityScale = 0;
@@ -182,8 +194,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void JumpPlayer()
     {
-        //PlayerBase.PlayerAnimator.SetTrigger(JUMP_ID);
-        //PlayerBase.PlayerAnimator.SetBool(FALL_ID, true);
+        SFX_Pool.Instance.Play(_jumpAudio);
+        PlayerBase.PlayerAnimator.SetTrigger(JUMP_ID);
+        PlayerBase.PlayerAnimator.SetBool(FALL_ID, true);
         _rigdbody.AddForce(_jumpForce * Time.fixedDeltaTime * Vector2.up, ForceMode2D.Impulse);
 
         _coyoteTimeCounter = 0f;
@@ -194,7 +207,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoubleJump()
     {
-        //PlayerBase.PlayerAnimator.SetTrigger(JUMP_ID);
+        SFX_Pool.Instance.Play(_jumpAudio);
+        PlayerBase.PlayerAnimator.SetTrigger(JUMP_ID);
         _doubleJumped = true;
         _rigdbody.linearVelocityY = 0;
         _rigdbody.AddForce(_jumpForce * Time.fixedDeltaTime * Vector2.up, ForceMode2D.Impulse);
@@ -225,6 +239,7 @@ public class PlayerMovement : MonoBehaviour
         if (_activeProjectile != null)
             return;
 
+        SFX_Pool.Instance.Play(_teleportAudio);
         GameObject projectile = Instantiate(
             _throwablePrefab,
             _throwPoint.position,
@@ -263,9 +278,13 @@ public class PlayerMovement : MonoBehaviour
         Collider2D groundTouched = Physics2D.OverlapBox((Vector2)transform.position - _feetBoxOffset, _feetBoxSize, 0, _groundLayer);
     
         if (groundTouched != null) {
-            //PlayerBase.PlayerAnimator.SetBool(FALL_ID, false);
+            PlayerBase.PlayerAnimator.SetBool(FALL_ID, false);
             _grounded = true;
             _doubleJumped = false;
+        }
+        else
+        {
+            PlayerBase.PlayerAnimator.SetBool(FALL_ID, true);           
         }
     }
 
@@ -298,7 +317,8 @@ public class PlayerMovement : MonoBehaviour
         if ((_groundLayer.value & (1 << collision.gameObject.layer)) > 0)
         {
             _grounded = false;
-            //PlayerBase.PlayerAnimator.SetBool(FALL_ID, true);
+            PlayerBase.PlayerAnimator.SetTrigger(JUMP_ID);
+            PlayerBase.PlayerAnimator.SetBool(FALL_ID, true);
         }
     }
     #endregion
@@ -308,4 +328,31 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireCube((Vector2)transform.position - _feetBoxOffset, _feetBoxSize);
     }
+    
+    #region FREEZE TIME
+    public void AllowFreezeTime(bool allow)
+    {
+        if(allow)
+        {
+            _inputs.Gameplay.UseMask.performed += FreezeTime;
+        }
+        else
+        {
+            _inputs.Gameplay.UseMask.performed -= FreezeTime;            
+        }
+    }
+
+    private void FreezeTime(InputAction.CallbackContext context) {
+        SFX_Pool.Instance.Play(_freezeTimeAudio);
+        StartCoroutine(FreezeTimer());
+        MaskSkillFreezeTime.OnFreezeTime?.Invoke(true);
+        PlayerMaskManager.spendCharge?.Invoke();
+    }
+
+    private IEnumerator FreezeTimer()
+    {
+        yield return new WaitForSeconds(_freezeTime);
+        MaskSkillFreezeTime.OnFreezeTime?.Invoke(false);
+    }
+    #endregion
 }

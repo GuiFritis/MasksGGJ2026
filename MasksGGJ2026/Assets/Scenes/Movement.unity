@@ -501,11 +501,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   _playerSpeed: 750
-  _jumpHeight: 200
-  _playerRenderer: {fileID: 563851174}
+  _maxSpeed: 6
+  _groundFriction: 10
+  _dashSpeed: 3000
+  _jumpForce: 200
   _groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  _graceTime: 0.05
+  _jumpLimiter: 0.05
   _feetBoxOffset: {x: 0, y: 0.52}
   _feetBoxSize: {x: 0.95, y: 0.15}
 --- !u!50 &563851173
@@ -524,7 +528,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6804f0f8e80d7cd44b8d73af835c40d0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

@@ -3,13 +3,12 @@ using UnityEngine;
 public class MaskSkillDash : MaskSkillBase
 {
     [SerializeField] private PlayerMovement _playerMovement;
-    private static PlayerMaskManager _maskManager; 
 
-    public override void EquipMask(PlayerMaskManager maskManager)
+    public override void EquipMask(MaskSO mask)
     {
+        if(mask != _maskSO) return;
         _playerMovement.AllowDash(true);
         PlayerMaskManager.onChargeSpent += ChargeSpent;
-        _maskManager = maskManager;
     }
 
     private void ChargeSpent(int charges)

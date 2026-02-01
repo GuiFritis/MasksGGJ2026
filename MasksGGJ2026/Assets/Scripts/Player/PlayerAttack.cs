@@ -7,16 +7,15 @@ public class PlayerAttack : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private PlayerMovement _playerMovement;
     private InGame _inputs;
-    [SerializeField]
-    private Vector2 _attackOffset;
-    [SerializeField]
-    private float _attackRadius;
-    [SerializeField]
-    private LayerMask _pogoLayer;
-    [SerializeField]
-    private float _knockback;
-    [SerializeField]
-    private float _attackCooldown;
+    private static readonly int ATTACK_ID = Animator.StringToHash("Attack");
+    [SerializeField] private Vector2 _attackOffset;
+    [SerializeField] private float _attackRadius;
+    [SerializeField] private LayerMask _pogoLayer;
+    [SerializeField] private float _knockback;
+    [SerializeField] private float _attackCooldown;
+    [Header("Audio")]
+    [SerializeField] private AudioSO _attackAudio;
+    [SerializeField] private AudioSO _hitAudio;
 
     private float _attackTimer = 0f;
 
@@ -58,9 +57,9 @@ public class PlayerAttack : MonoBehaviour
     {
         if (CanAttack)
         {
+            SFX_Pool.Instance.Play(_attackAudio);
+            PlayerBase.PlayerAnimator.SetTrigger(ATTACK_ID);
             _attackTimer = _attackCooldown;
-
-            Debug.Log("Attack");
 
             Vector2 attackPosition = (Vector2)transform.position + _attackOffset;
 
@@ -73,11 +72,19 @@ public class PlayerAttack : MonoBehaviour
             if (hits.Length == 0)
                 return;
 
+            
+            SFX_Pool.Instance.Play(_hitAudio);
+            foreach (Collider2D hit in hits)
+            {
+                if (hit.TryGetComponent<Dodo>(out Dodo dodo))
+                {
+                    dodo.HandlePogo();
+                }
+            }
+
             _rigidbody.linearVelocityY = 0;
 
-            Debug.Log("hit");
-
-            _rigidbody.AddForce(Vector2.up * _knockback, ForceMode2D.Impulse);
+            _rigidbody.AddForce(Vector2.up * _knockback, ForceMode2D.Impulse);   
         }
 
     }

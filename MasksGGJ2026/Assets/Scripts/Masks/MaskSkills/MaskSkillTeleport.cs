@@ -3,13 +3,12 @@ using UnityEngine;
 public class MaskSkillTeleport : MaskSkillBase
 {
     [SerializeField] private PlayerMovement _playerMovement;
-    private static PlayerMaskManager _maskManager; 
 
-    public override void EquipMask(PlayerMaskManager maskManager)
+    public override void EquipMask(MaskSO mask)
     {
+        if(mask != _maskSO) return;
         _playerMovement.AllowTeleport(true);
         PlayerMaskManager.onChargeSpent += ChargeSpent;
-        _maskManager = maskManager;
     }
 
     private void ChargeSpent(int charges)
