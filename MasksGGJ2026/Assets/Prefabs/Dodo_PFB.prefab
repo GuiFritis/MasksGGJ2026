@@ -204,3 +204,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dodo
   _recoveryTime: 1
   _knockdown: 3.5
+  _audioSO: {fileID: 11400000, guid: 55d80d5b37be90256b6c8467b661cef9, type: 2}

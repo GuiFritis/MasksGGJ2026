@@ -12,6 +12,7 @@ public class PlayerBase : MonoBehaviour
     private static Animator _playerAnimator;
     public static Animator PlayerAnimator => _playerAnimator;
     [SerializeField] private AudioSO _deathAudio;
+    [SerializeField] private AudioSO _resurrectionAudio;
 
     private bool _canGhost;
     [SerializeField] private float _ghostTime = 3f;
@@ -64,6 +65,7 @@ public class PlayerBase : MonoBehaviour
     }
 
     private void ActiveGhost() {
+        SFX_Pool.Instance.Play(_resurrectionAudio);
         StartCoroutine(GhostTimer());
         MaskSkillGhost.OnGhostActive?.Invoke(true);
     }

@@ -9,6 +9,7 @@ public class MaskTeleportProjectile : MonoBehaviour
 
     [SerializeField]
     private LayerMask _translocatableLayers;
+    [SerializeField] private AudioSO _audio;
 
     public void SetOwner(PlayerMovement player)
     {
@@ -39,7 +40,8 @@ public class MaskTeleportProjectile : MonoBehaviour
     {
         if ((_translocatableLayers.value & (1 << collision.gameObject.layer)) != 0)
         {
-            var hitObject = collision.gameObject;
+            var hitObject = collision.gameObject;        
+            SFX_Pool.Instance.Play(_audio);
             TranslocatePlayer(hitObject);
         }
     }

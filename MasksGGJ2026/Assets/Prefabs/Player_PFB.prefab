@@ -416,6 +416,10 @@ MonoBehaviour:
   _throwablePrefab: {fileID: 1523190071805103005, guid: 34fdfb705ddbc2241a1bed47e03b2c61, type: 3}
   _throwPoint: {fileID: 7674280653593431635}
   _throwForce: 10
+  _jumpAudio: {fileID: 11400000, guid: f2bb0958df9b9a49dbe71fe5dcb6b472, type: 2}
+  _dashAudio: {fileID: 11400000, guid: 9d2f05a51ec6e4fe791eb979555ed336, type: 2}
+  _teleportAudio: {fileID: 11400000, guid: 3bd2462e60596ed6c91c4835855997c8, type: 2}
+  _freezeTimeAudio: {fileID: 11400000, guid: e3d64715fc78ed18c92db22ecdd156ef, type: 2}
 --- !u!114 &6509200766727696832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,6 +439,8 @@ MonoBehaviour:
     m_Bits: 128
   _knockback: 8.3
   _attackCooldown: 0.8
+  _attackAudio: {fileID: 11400000, guid: 4291f262a6b5696ee8e6584ecf6a533e, type: 2}
+  _hitAudio: {fileID: 11400000, guid: 3be98e1426333f2c19c0e7a3acf4502d, type: 2}
 --- !u!114 &642313481781303817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,4 +457,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   _animator: {fileID: 212531953248928141}
+  _deathAudio: {fileID: 11400000, guid: d4694e41655baff31b92900ba46b3939, type: 2}
+  _resurrectionAudio: {fileID: 11400000, guid: bdf06a78f2df7040b8b630076b31de45, type: 2}
   _ghostTime: 3
