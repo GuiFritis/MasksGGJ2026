@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private PlayerMovement _playerMovement;
     private InGame _inputs;
+    private static readonly int ATTACK_ID = Animator.StringToHash("Attack");
     [SerializeField]
     private Vector2 _attackOffset;
     [SerializeField]
@@ -58,6 +59,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (CanAttack)
         {
+            PlayerBase.PlayerAnimator.SetTrigger(ATTACK_ID);
             _attackTimer = _attackCooldown;
 
             Vector2 attackPosition = (Vector2)transform.position + _attackOffset;

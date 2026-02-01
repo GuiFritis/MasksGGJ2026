@@ -4,14 +4,13 @@ using UnityEngine;
 public class MaskSkillGhost : MaskSkillBase
 {
     [SerializeField] private PlayerBase _playerBase;
-    private static PlayerMaskManager _maskManager; 
     public static Action<bool> OnGhostActive;
 
-    public override void EquipMask(PlayerMaskManager maskManager)
+    public override void EquipMask(MaskSO mask)
     {
+        if(mask != _maskSO) return;
         _playerBase.AllowGhost(true);
         PlayerMaskManager.onChargeSpent += ChargeSpent;
-        _maskManager = maskManager;
     }
 
     private void ChargeSpent(int charges)

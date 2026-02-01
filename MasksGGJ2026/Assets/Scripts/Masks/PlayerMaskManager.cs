@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMaskManager : MonoBehaviour
 {
     [SerializeField] private List<MaskSkillBase> _maskSkills;
-    private MaskSO _mask;
     private int _currentCharges = 0;
+    public static Action<MaskSO> onMaskEquiped;
     public static Action<int> onChargeSpent;
     public static Action spendCharge;
 
@@ -18,9 +18,8 @@ public class PlayerMaskManager : MonoBehaviour
 
     public void SetMask(MaskSO mask)
     {
-        _mask = mask;
-        _currentCharges = _mask.charges;
-        _maskSkills.Find(i => i.GetMaskSO.Equals(_mask))?.EquipMask(this);        
+        _currentCharges = mask.charges;
+        onMaskEquiped?.Invoke(mask);       
     }
 
     public void SpendCharge()

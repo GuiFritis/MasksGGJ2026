@@ -8,12 +8,24 @@ public class PlayerBase : MonoBehaviour
     private LayerMask _deathLayer;
     public event Action OnDeath;
     private static readonly int DEATH_ID = Animator.StringToHash("Die");
+    [SerializeField] private Animator _animator;
     private static Animator _playerAnimator;
     public static Animator PlayerAnimator => _playerAnimator;
 
     private bool _canGhost;
     [SerializeField] private float _ghostTime = 3f;
-    
+
+    void Awake()
+    {
+        _playerAnimator = _animator;
+        PlayerMaskManager.onMaskEquiped += EquipeMask;
+    }
+
+    private void EquipeMask(MaskSO mask)
+    {
+        _playerAnimator.runtimeAnimatorController = mask.animatorOverride;
+    }
+
     #region COLLISION
     private void OnCollisionEnter2D(Collision2D collision)
     {                

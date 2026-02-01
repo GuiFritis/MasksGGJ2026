@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        PlayerBase.PlayerAnimator.SetFloat(WALK_ID, MathF.Min(_rigdbody.linearVelocityX, 1f));
+        PlayerBase.PlayerAnimator.SetFloat(WALK_ID, MathF.Min(Mathf.Abs(_rigdbody.linearVelocityX), 1f));
         _jumpLimiterCounter -= Time.fixedDeltaTime;
 
         if (_direction != 0f && !_isDashing)
@@ -272,6 +272,10 @@ public class PlayerMovement : MonoBehaviour
             _grounded = true;
             _doubleJumped = false;
         }
+        else
+        {
+            PlayerBase.PlayerAnimator.SetBool(FALL_ID, true);           
+        }
     }
 
     private void GroundedFriction()
@@ -303,16 +307,17 @@ public class PlayerMovement : MonoBehaviour
         if ((_groundLayer.value & (1 << collision.gameObject.layer)) > 0)
         {
             _grounded = false;
+            PlayerBase.PlayerAnimator.SetTrigger(JUMP_ID);
             PlayerBase.PlayerAnimator.SetBool(FALL_ID, true);
         }
     }
     #endregion
 
-    // void OnDrawGizmosSelected()
-    // {
-    //     Gizmos.color = Color.magenta;
-    //     Gizmos.DrawWireCube((Vector2)transform.position - _feetBoxOffset, _feetBoxSize);
-    // }
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube((Vector2)transform.position - _feetBoxOffset, _feetBoxSize);
+    }
     
     #region FREEZE TIME
     public void AllowFreezeTime(bool allow)
