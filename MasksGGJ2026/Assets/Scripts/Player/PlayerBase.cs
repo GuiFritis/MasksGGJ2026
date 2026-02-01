@@ -11,6 +11,7 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] private Animator _animator;
     private static Animator _playerAnimator;
     public static Animator PlayerAnimator => _playerAnimator;
+    [SerializeField] private AudioSO _deathAudio;
 
     private bool _canGhost;
     [SerializeField] private float _ghostTime = 3f;
@@ -77,7 +78,7 @@ public class PlayerBase : MonoBehaviour
     #region DEATH
     private void Die()
     {
-        Debug.Log("Player is dead");
+        SFX_Pool.Instance.Play(_deathAudio);
         _playerAnimator.SetTrigger(DEATH_ID);
         OnDeath?.Invoke();
     }
