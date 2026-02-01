@@ -1,16 +1,16 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class MaskSkillGhost : MaskSkillBase
 {
-    [SerializeField] private PlayerMovement _playerMovement;
+    [SerializeField] private PlayerBase _playerBase;
     private static PlayerMaskManager _maskManager; 
     public static Action<bool> OnGhostActive;
-    private float _ghostTimer = 3f;
-    private bool _isGhost = false;
 
     public override void EquipMask(PlayerMaskManager maskManager)
     {
+        _playerBase.AllowGhost(true);
         PlayerMaskManager.onChargeSpent += ChargeSpent;
         _maskManager = maskManager;
     }
@@ -19,21 +19,8 @@ public class MaskSkillGhost : MaskSkillBase
     {
         if(charges <= 0)
         {
+            _playerBase.AllowGhost(false);
             PlayerMaskManager.onChargeSpent -= ChargeSpent;
         }
-    }
-
-    private void Update() {
-        if (_isGhost) {
-            if (_ghostTimer > 0) {
-                _ghostTimer -= Time.deltaTime;
-            } else {
-                ActiveGhost(true);
-            }
-        }
-    }
-
-    public void ActiveGhost(bool isGhost) {
-        OnGhostActive?.Invoke(isGhost);
     }
 }
