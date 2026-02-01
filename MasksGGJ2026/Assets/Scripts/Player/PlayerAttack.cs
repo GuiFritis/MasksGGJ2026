@@ -8,16 +8,14 @@ public class PlayerAttack : MonoBehaviour
     private PlayerMovement _playerMovement;
     private InGame _inputs;
     private static readonly int ATTACK_ID = Animator.StringToHash("Attack");
-    [SerializeField]
-    private Vector2 _attackOffset;
-    [SerializeField]
-    private float _attackRadius;
-    [SerializeField]
-    private LayerMask _pogoLayer;
-    [SerializeField]
-    private float _knockback;
-    [SerializeField]
-    private float _attackCooldown;
+    [SerializeField] private Vector2 _attackOffset;
+    [SerializeField] private float _attackRadius;
+    [SerializeField] private LayerMask _pogoLayer;
+    [SerializeField] private float _knockback;
+    [SerializeField] private float _attackCooldown;
+    [Header("Audio")]
+    [SerializeField] private AudioSO _attackAudio;
+    [SerializeField] private AudioSO _hitAudio;
 
     private float _attackTimer = 0f;
 
@@ -59,6 +57,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (CanAttack)
         {
+            SFX_Pool.Instance.Play(_attackAudio);
             PlayerBase.PlayerAnimator.SetTrigger(ATTACK_ID);
             _attackTimer = _attackCooldown;
 
@@ -73,6 +72,8 @@ public class PlayerAttack : MonoBehaviour
             if (hits.Length == 0)
                 return;
 
+            
+            SFX_Pool.Instance.Play(_hitAudio);
             foreach (Collider2D hit in hits)
             {
                 if (hit.TryGetComponent<Dodo>(out Dodo dodo))

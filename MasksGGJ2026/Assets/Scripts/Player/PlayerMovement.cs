@@ -54,6 +54,12 @@ public class PlayerMovement : MonoBehaviour
     private bool _facingRight = true;
     private GameObject _activeProjectile;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSO _jumpAudio;
+    [SerializeField] private AudioSO _dashAudio;
+    [SerializeField] private AudioSO _teleportAudio;
+    [SerializeField] private AudioSO _freezeTimeAudio;
+
     void OnValidate()
     {
         if (_rigdbody == null)
@@ -152,6 +158,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_direction != 0 && !_isDashing)
         {
+            SFX_Pool.Instance.Play(_dashAudio);
             PlayerBase.PlayerAnimator.SetTrigger(DASH_ID);
             _isDashing = true;
             PlayerMaskManager.spendCharge?.Invoke();
@@ -187,6 +194,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void JumpPlayer()
     {
+        SFX_Pool.Instance.Play(_jumpAudio);
         PlayerBase.PlayerAnimator.SetTrigger(JUMP_ID);
         PlayerBase.PlayerAnimator.SetBool(FALL_ID, true);
         _rigdbody.AddForce(_jumpForce * Time.fixedDeltaTime * Vector2.up, ForceMode2D.Impulse);
@@ -199,6 +207,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoubleJump()
     {
+        SFX_Pool.Instance.Play(_jumpAudio);
         PlayerBase.PlayerAnimator.SetTrigger(JUMP_ID);
         _doubleJumped = true;
         _rigdbody.linearVelocityY = 0;
@@ -230,6 +239,7 @@ public class PlayerMovement : MonoBehaviour
         if (_activeProjectile != null)
             return;
 
+        SFX_Pool.Instance.Play(_teleportAudio);
         GameObject projectile = Instantiate(
             _throwablePrefab,
             _throwPoint.position,
@@ -333,6 +343,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FreezeTime(InputAction.CallbackContext context) {
+        SFX_Pool.Instance.Play(_freezeTimeAudio);
         StartCoroutine(FreezeTimer());
         MaskSkillFreezeTime.OnFreezeTime?.Invoke(true);
         PlayerMaskManager.spendCharge?.Invoke();

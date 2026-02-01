@@ -8,6 +8,7 @@ public class Dodo : MonoBehaviour
     private Vector2 _originalPosition;
     [SerializeField] private float _recoveryTime;
     [SerializeField] private float _knockdown;
+    [SerializeField] private AudioSO _audioSO;
     private bool _isTimeFrozen;
     private bool _isRecovering = false;
 
@@ -38,6 +39,8 @@ public class Dodo : MonoBehaviour
         if (!_isRecovering)
         {
             _originalPosition = _rigidbody.position;
+            
+            SFX_Pool.Instance.Play(_audioSO);
             
             _rigidbody.AddForce(_knockdown * Vector2.down, ForceMode2D.Impulse);
 
