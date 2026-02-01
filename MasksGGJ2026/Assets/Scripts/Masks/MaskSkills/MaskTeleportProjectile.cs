@@ -49,10 +49,13 @@ public class MaskTeleportProjectile : MonoBehaviour
         Vector3 setPlayerPosition = _owner.transform.position;
         Vector3 hitObjectPosition = hitObject.transform.position;
 
-        _owner.transform.position = hitObjectPosition;
-        hitObject.transform.position = setPlayerPosition;
+        _owner.transform.position = new Vector3(hitObjectPosition.x, setPlayerPosition.y);
+        hitObject.transform.position = new Vector3(setPlayerPosition.x, hitObjectPosition.y);
+
+        hitObject
+            .GetComponent<ITranslocatableMovingObject>()?
+            .ResetPosition();
 
         DestroySelf();
-
     }
 }
