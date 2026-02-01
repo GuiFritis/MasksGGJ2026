@@ -60,8 +60,6 @@ public class PlayerAttack : MonoBehaviour
         {
             _attackTimer = _attackCooldown;
 
-            Debug.Log("Attack");
-
             Vector2 attackPosition = (Vector2)transform.position + _attackOffset;
 
             Collider2D[] hits = Physics2D.OverlapCircleAll(
@@ -73,11 +71,17 @@ public class PlayerAttack : MonoBehaviour
             if (hits.Length == 0)
                 return;
 
+            foreach (Collider2D hit in hits)
+            {
+                if (hit.TryGetComponent<Dodo>(out Dodo dodo))
+                {
+                    dodo.HandlePogo();
+                }
+            }
+
             _rigidbody.linearVelocityY = 0;
 
-            Debug.Log("hit");
-
-            _rigidbody.AddForce(Vector2.up * _knockback, ForceMode2D.Impulse);
+            _rigidbody.AddForce(Vector2.up * _knockback, ForceMode2D.Impulse);   
         }
 
     }
