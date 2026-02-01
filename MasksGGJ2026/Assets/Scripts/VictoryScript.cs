@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Utils;
 
 [RequireComponent(typeof(Collider2D))]
 public class VictoryScript : MonoBehaviour
@@ -20,6 +22,7 @@ public class VictoryScript : MonoBehaviour
     private void GameOver()
     {
         TotemManager.Instance.AddMask(_mask, false);
+        Invoke(nameof(BackToMaskSelection), .5f);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -27,6 +30,12 @@ public class VictoryScript : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             TotemManager.Instance.AddMask(_mask, true);
+            Invoke(nameof(BackToMaskSelection), .5f);
         }
+    }
+
+    private void BackToMaskSelection()
+    {
+        SceneManager.LoadScene(1);
     }
 }
