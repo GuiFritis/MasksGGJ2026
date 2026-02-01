@@ -15,18 +15,6 @@ public class DeathManager : MonoBehaviour
         _player.OnDeath += HandleDeath;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void HandleDeath()
     {
         _uiFadeOut.FadeOut(() =>
