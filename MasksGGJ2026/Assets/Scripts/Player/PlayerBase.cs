@@ -6,16 +6,27 @@ public class PlayerBase : MonoBehaviour
 {
     [SerializeField]
     private LayerMask _deathLayer;
-
     public event Action OnDeath;
+    private static readonly int DEATH_ID = Animator.StringToHash("Die");
+    private static Animator _playerAnimator;
+    public static Animator PlayerAnimator => _playerAnimator;
 
     private bool _canGhost;
     [SerializeField] private float _ghostTime = 3f;
     
     #region COLLISION
     private void OnCollisionEnter2D(Collision2D collision)
-    {    
-        CheckCollision(collision.gameObject);
+    {        
+        if (_isUsingGhostMask) {
+            
+        Debug.Log("está de mascara!");
+        HandleGhost();
+        }
+        
+        if ((_deathLayer.value & (1 << collision.gameObject.layer)) != 0)
+        {
+            Die();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -63,6 +74,8 @@ public class PlayerBase : MonoBehaviour
     #region DEATH
     private void Die()
     {
+        Debug.Log("Player is dead");
+        _playerAnimator.SetTrigger(DEATH_ID);
         OnDeath?.Invoke();
     }
     #endregion

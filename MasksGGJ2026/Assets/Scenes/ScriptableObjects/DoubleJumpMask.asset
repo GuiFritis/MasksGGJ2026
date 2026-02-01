@@ -18,3 +18,4 @@ MonoBehaviour:
   sprite: {fileID: 0}
   charges: 3
   eMaskSkill: 0
+  _animatorOverride: {fileID: 22100000, guid: 532766b8deca88bd4b47749a858d292e, type: 2}
