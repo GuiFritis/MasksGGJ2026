@@ -240,6 +240,8 @@ public class PlayerMovement : MonoBehaviour
             .GetComponent<MaskTeleportProjectile>()
             .SetOwner(this);
 
+        PlayerMaskManager.spendCharge?.Invoke();
+
     }
 
     public void ClearProjectile()
