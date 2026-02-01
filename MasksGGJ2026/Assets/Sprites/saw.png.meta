@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ea7962addc0fcefc0886903254066077
+guid: 31f487ae483b4dd11b3fd4ff580ae150
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2231025573198950211
-    second: Serrao_0
+      213: -282803389941045344
+    second: saw_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Serrao_0
+      name: saw_0
       rect:
         serializedVersion: 2
         x: 229
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db01aa8cf0ec901e0800000000000000
-      internalID: -2231025573198950211
+      spriteID: 0a7a941b0d7431cf0800000000000000
+      internalID: -282803389941045344
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Serrao_0: -2231025573198950211
+      saw_0: -282803389941045344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

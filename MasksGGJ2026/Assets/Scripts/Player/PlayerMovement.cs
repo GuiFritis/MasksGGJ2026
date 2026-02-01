@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D _rigdbody;
-    [SerializeField] private Animator _animator;
     private static readonly int WALK_ID = Animator.StringToHash("Velocity");
     private static readonly int JUMP_ID = Animator.StringToHash("Jump");
     private static readonly int FALL_ID = Animator.StringToHash("Falling");
@@ -61,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate() 
     {
-        _animator.SetFloat(WALK_ID, MathF.Min(_rigdbody.linearVelocityX, 1f));
+        PlayerBase.PlayerAnimator.SetFloat(WALK_ID, MathF.Min(_rigdbody.linearVelocityX, 1f));
         _jumpLimiterCounter -= Time.fixedDeltaTime;
 
         if (_direction != 0f && !_isDashing) {
@@ -117,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(_direction != 0 && !_isDashing)
         {
-            _animator.SetTrigger(DASH_ID);
+            PlayerBase.PlayerAnimator.SetTrigger(DASH_ID);
             _isDashing = true;
             PlayerMaskManager.spendCharge?.Invoke();
             _rigdbody.gravityScale = 0;
@@ -152,8 +151,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void JumpPlayer() 
     {
-        _animator.SetTrigger(JUMP_ID);
-        _animator.SetBool(FALL_ID, true);
+        PlayerBase.PlayerAnimator.SetTrigger(JUMP_ID);
+        PlayerBase.PlayerAnimator.SetBool(FALL_ID, true);
         _rigdbody.AddForce(_jumpForce * Time.fixedDeltaTime * Vector2.up, ForceMode2D.Impulse);
 
         _coyoteTimeCounter = 0f;
@@ -164,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoubleJump() 
     {
-        _animator.SetTrigger(JUMP_ID);
+        PlayerBase.PlayerAnimator.SetTrigger(JUMP_ID);
         _doubleJumped = true;
         _rigdbody.linearVelocityY = 0;
         _rigdbody.AddForce(_jumpForce * Time.fixedDeltaTime * Vector2.up, ForceMode2D.Impulse);
@@ -185,7 +184,7 @@ public class PlayerMovement : MonoBehaviour
         Collider2D groundTouched = Physics2D.OverlapBox((Vector2)transform.position - _feetBoxOffset, _feetBoxSize, 0, _groundLayer);
     
         if (groundTouched != null) {
-            _animator.SetBool(FALL_ID, false);
+            PlayerBase.PlayerAnimator.SetBool(FALL_ID, false);
             _grounded = true;
             _doubleJumped = false;
         }
@@ -220,7 +219,7 @@ public class PlayerMovement : MonoBehaviour
         if((_groundLayer.value & (1 << collision.gameObject.layer)) > 0)
         {
             _grounded = false;
-            _animator.SetBool(FALL_ID, true);
+            PlayerBase.PlayerAnimator.SetBool(FALL_ID, true);
         }
     }
     #endregion
