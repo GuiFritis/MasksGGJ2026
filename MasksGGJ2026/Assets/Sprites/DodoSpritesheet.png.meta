@@ -1,0 +1,525 @@
+fileFormatVersion: 2
+guid: 454d9e61bd7d14a4dae6f4669a3ae441
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -266261605649972558
+    second: DodoSpritesheet_0
+  - first:
+      213: -6847142450345073503
+    second: DodoSpritesheet_1
+  - first:
+      213: -7816317586188082724
+    second: DodoSpritesheet_2
+  - first:
+      213: -6634669095772154893
+    second: DodoSpritesheet_3
+  - first:
+      213: -3730066664817623992
+    second: DodoSpritesheet_4
+  - first:
+      213: -6289713166578453953
+    second: DodoSpritesheet_5
+  - first:
+      213: 7497414068052542239
+    second: DodoSpritesheet_6
+  - first:
+      213: 473501986605646947
+    second: DodoSpritesheet_7
+  - first:
+      213: -5637593912290195369
+    second: DodoSpritesheet_8
+  - first:
+      213: 5352233031602227174
+    second: DodoSpritesheet_9
+  - first:
+      213: 1059555532147075742
+    second: DodoSpritesheet_10
+  - first:
+      213: 64611299319851949
+    second: DodoSpritesheet_11
+  - first:
+      213: 4720509424007858773
+    second: DodoSpritesheet_12
+  - first:
+      213: -8877808822664614546
+    second: DodoSpritesheet_13
+  - first:
+      213: -6800017141131673176
+    second: DodoSpritesheet_14
+  - first:
+      213: 1365375544045294607
+    second: DodoSpritesheet_15
+  - first:
+      213: 6661998205923987452
+    second: DodoSpritesheet_16
+  - first:
+      213: 6806789646304550431
+    second: DodoSpritesheet_17
+  - first:
+      213: -2270681879160280180
+    second: DodoSpritesheet_18
+  - first:
+      213: -5626592296584114800
+    second: DodoSpritesheet_19
+  - first:
+      213: -5121526575591098247
+    second: DodoSpritesheet_20
+  - first:
+      213: 5804760204308108733
+    second: DodoSpritesheet_21
+  - first:
+      213: -7562624587054894052
+    second: DodoSpritesheet_22
+  - first:
+      213: -8608498372668069269
+    second: DodoSpritesheet_23
+  - first:
+      213: 2732154114006897034
+    second: DodoSpritesheet_24
+  - first:
+      213: 1411837607557917121
+    second: DodoSpritesheet_25
+  - first:
+      213: -8423028007132352159
+    second: DodoSpritesheet_26
+  - first:
+      213: 6129520380854456653
+    second: DodoSpritesheet_27
+  - first:
+      213: 5123181131589254937
+    second: DodoSpritesheet_28
+  - first:
+      213: 3369913696979856902
+    second: DodoSpritesheet_29
+  - first:
+      213: 1210199250234786375
+    second: DodoSpritesheet_30
+  - first:
+      213: -5187544477437848676
+    second: DodoSpritesheet_31
+  - first:
+      213: 3059174408513359363
+    second: DodoSpritesheet_32
+  - first:
+      213: -4852550417766127910
+    second: DodoSpritesheet_33
+  - first:
+      213: -7917919111137342498
+    second: DodoSpritesheet_34
+  - first:
+      213: 8211835364492378832
+    second: DodoSpritesheet_35
+  - first:
+      213: -8587960386500314474
+    second: DodoSpritesheet_36
+  - first:
+      213: -5262868815866792224
+    second: DodoSpritesheet_37
+  - first:
+      213: -7457713460818055962
+    second: DodoSpritesheet_38
+  - first:
+      213: 1306671953516470516
+    second: DodoSpritesheet_39
+  - first:
+      213: 1464205107320658301
+    second: DodoSpritesheet_40
+  - first:
+      213: 4339174706963679787
+    second: DodoSpritesheet_41
+  - first:
+      213: 5111697248087702489
+    second: DodoSpritesheet_42
+  - first:
+      213: 9098826941107599165
+    second: DodoSpritesheet_43
+  - first:
+      213: -7033936956875911938
+    second: DodoSpritesheet_44
+  - first:
+      213: 1971110361890829983
+    second: DodoSpritesheet_45
+  - first:
+      213: -462060940654645417
+    second: DodoSpritesheet_46
+  - first:
+      213: 6934750978817164856
+    second: DodoSpritesheet_47
+  - first:
+      213: -5727031144655618135
+    second: DodoSpritesheet_48
+  - first:
+      213: 5773620098287611159
+    second: DodoSpritesheet_49
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DodoSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b288e9fa7c0e4cf0800000000000000
+      internalID: -266261605649972558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DodoSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a42fa818301af0a0800000000000000
+      internalID: -6847142450345073503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DodoSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd1ee97619cd68390800000000000000
+      internalID: -7816317586188082724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DodoSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f31d300c9bece3a0800000000000000
+      internalID: -6634669095772154893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DodoSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84cf40f81242c3cc0800000000000000
+      internalID: -3730066664817623992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DodoSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f327ef6033376b8a0800000000000000
+      internalID: -6289713166578453953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DodoSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13c9443f5a2c0860800000000000000
+      internalID: 7497414068052542239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DodoSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36442105c87329600800000000000000
+      internalID: 473501986605646947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DodoSpritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 758c90eb43e33c1b0800000000000000
+      internalID: -5637593912290195369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DodoSpritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e743cbb593f64a40800000000000000
+      internalID: 5352233031602227174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dbb9ccd99e98184468c37acdf41b76bb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":2.0},"gridSpriteSize":{"x":192.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      DodoSpritesheet_0: -266261605649972558
+      DodoSpritesheet_1: -6847142450345073503
+      DodoSpritesheet_2: -7816317586188082724
+      DodoSpritesheet_3: -6634669095772154893
+      DodoSpritesheet_4: -3730066664817623992
+      DodoSpritesheet_5: -6289713166578453953
+      DodoSpritesheet_6: 7497414068052542239
+      DodoSpritesheet_7: 473501986605646947
+      DodoSpritesheet_8: -5637593912290195369
+      DodoSpritesheet_9: 5352233031602227174
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
