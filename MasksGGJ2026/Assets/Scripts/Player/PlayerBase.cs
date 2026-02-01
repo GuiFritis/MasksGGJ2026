@@ -6,7 +6,7 @@ public class PlayerBase : MonoBehaviour
 {
     [SerializeField]
     private LayerMask _deathLayer;
-    public event Action OnDeath;
+    public static Action OnDeath;
     private static readonly int DEATH_ID = Animator.StringToHash("Die");
     [SerializeField] private Animator _animator;
     private static Animator _playerAnimator;
