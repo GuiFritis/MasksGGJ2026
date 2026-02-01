@@ -31,8 +31,8 @@ public class LanceTrap : MonoBehaviour
         _startScale = transform.localScale;
 
         _endScale = _startScale + new Vector3(
-            Mathf.Abs(direction.x) * maxLength,
-            Mathf.Abs(direction.y) * maxLength,
+            direction.x * maxLength,
+            direction.y * maxLength,
             0
         );
 
