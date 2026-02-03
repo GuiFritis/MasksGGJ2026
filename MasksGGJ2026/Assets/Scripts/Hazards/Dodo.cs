@@ -4,8 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Dodo : MonoBehaviour
 {
-    private Rigidbody2D _rigidbody;
-    private Vector2 _originalPosition;
+    [SerializeField] private Rigidbody2D _rigidbody;
+    private Vector2 _originalPosition = Vector2.zero;
     [SerializeField] private float _recoveryTime;
     [SerializeField] private float _knockdown;
     [SerializeField] private AudioSO _audioSO;
@@ -18,14 +18,11 @@ public class Dodo : MonoBehaviour
         {
             _rigidbody = GetComponent<Rigidbody2D>();
         } 
-        if (_originalPosition == null)
-        {
-            _originalPosition = transform.position;
-        }
     }
 
     private void OnEnable()
     {
+        _originalPosition = transform.position;
         MaskSkillFreezeTime.OnFreezeTime += AlternateTime;
     }
 

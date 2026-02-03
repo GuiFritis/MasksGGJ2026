@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 642313481781303817}
   m_Layer: 0
   m_Name: Player_PFB
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,6 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f8f1ece36377e48b0274ed0c71685e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  _rigdbody: {fileID: 8657206536234965223}
   _playerSpeed: 750
   _maxSpeed: 6
   _groundFriction: 10
@@ -432,13 +433,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7bbce6edf8cdd4d8725f5b683188b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  _playerMovement: {fileID: 3611315426934052477}
   _attackOffset: {x: 0, y: -0.8}
   _attackRadius: 0.85
   _pogoLayer:
     serializedVersion: 2
     m_Bits: 128
   _knockback: 8.3
-  _attackCooldown: 0.6
+  _attackCooldown: 0.5
   _attackAudio: {fileID: 11400000, guid: 4291f262a6b5696ee8e6584ecf6a533e, type: 2}
   _hitAudio: {fileID: 11400000, guid: 3be98e1426333f2c19c0e7a3acf4502d, type: 2}
 --- !u!114 &642313481781303817

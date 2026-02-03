@@ -4,8 +4,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(PlayerMovement))]
 public class PlayerAttack : MonoBehaviour
 {
-    private Rigidbody2D _rigidbody;
-    private PlayerMovement _playerMovement;
+    [SerializeField] private PlayerMovement _playerMovement;
     private InGame _inputs;
     private static readonly int ATTACK_ID = Animator.StringToHash("Attack");
     [SerializeField] private Vector2 _attackOffset;
@@ -23,10 +22,6 @@ public class PlayerAttack : MonoBehaviour
 
     void OnValidate()
     {
-        if (_rigidbody == null)
-        {
-            _rigidbody = GetComponent<Rigidbody2D>();
-        }
         if (_playerMovement == null)
         {
             _playerMovement = GetComponent<PlayerMovement>();
@@ -82,9 +77,9 @@ public class PlayerAttack : MonoBehaviour
                 }
             }
 
-            _rigidbody.linearVelocityY = 0;
+            _playerMovement.PlayerRigdbody.linearVelocityY = 0;
 
-            _rigidbody.AddForce(Vector2.up * _knockback, ForceMode2D.Impulse);   
+            _playerMovement.PlayerRigdbody.AddForce(Vector2.up * _knockback, ForceMode2D.Impulse);   
         }
 
     }

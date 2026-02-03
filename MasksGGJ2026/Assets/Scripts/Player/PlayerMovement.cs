@@ -7,7 +7,8 @@ using UnityEngine.InputSystem;
 [DefaultExecutionOrder(-1)]
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D _rigdbody;
+    [SerializeField] private Rigidbody2D _rigdbody;
+    public Rigidbody2D PlayerRigdbody => _rigdbody;
     private static readonly int WALK_ID = Animator.StringToHash("Velocity");
     private static readonly int JUMP_ID = Animator.StringToHash("Jump");
     private static readonly int FALL_ID = Animator.StringToHash("Falling");
@@ -252,6 +253,10 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 direction = _facingRight ? Vector2.right : Vector2.left;
         rb.linearVelocityX = direction.x * _throwForce;
+        if(_facingRight)
+        {
+            projectile.GetComponent<SpriteRenderer>().flipX = true;
+        }
 
         _activeProjectile = projectile;
 
@@ -291,7 +296,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float _accelerationX = _groundFriction;
 
-        _accelerationX *= Mathf.Sign(_rigdbody.linearVelocity.x) * -1;
+        _accelerationX *= Mathf.Sign(_rigdbody.linearVelocityX) * -1;
 
         _rigdbody.AddForce(Vector2.right * _accelerationX, ForceMode2D.Force);
     }
@@ -300,7 +305,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if ((_groundLayer.value & (1 << collision.gameObject.layer)) != 0 && _direction == 0f)
         {
-            if (Mathf.Abs(_rigdbody.linearVelocity.x) > _groundFriction / 5)
+            if (Mathf.Abs(_rigdbody.linearVelocityX) > _groundFriction / 5)
             {
                 GroundedFriction();
             }

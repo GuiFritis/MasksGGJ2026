@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33b1f899b1ecd914e8de24b2166f58d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dodo
-  _recoveryTime: 1
+  _rigidbody: {fileID: 4013260898969291760}
+  _recoveryTime: 0.6
   _knockdown: 3.5
   _audioSO: {fileID: 11400000, guid: 55d80d5b37be90256b6c8467b661cef9, type: 2}

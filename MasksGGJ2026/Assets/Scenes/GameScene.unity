@@ -10298,7 +10298,7 @@ GameObject:
   - component: {fileID: 1843134782}
   - component: {fileID: 1843134785}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: WinPortal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10334,7 +10334,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -11331,7 +11331,7 @@ PrefabInstance:
       objectReference: {fileID: 637122644}
     - target: {fileID: 5427788155237671042, guid: 6b631fe2647234838875e2038dffbd6c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -87.349945
+      value: -30.469944
       objectReference: {fileID: 0}
     - target: {fileID: 5427788155237671042, guid: 6b631fe2647234838875e2038dffbd6c, type: 3}
       propertyPath: m_LocalPosition.y
