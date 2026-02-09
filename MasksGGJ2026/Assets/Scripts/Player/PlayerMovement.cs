@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _playerSpeed = 750f;
     [SerializeField] private float _maxSpeed = 10f;
     [SerializeField] public float _groundFriction = 1.5f;
+    [SerializeField] private float _airSpeedMultiplier = 1.2f;
+    [SerializeField] private float _airFriction = 1f;
     private float _direction = 0f;
 
     [Header("Dash")]
@@ -100,6 +102,10 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             CheckGround();
+            if(_direction == 0)
+            {
+                AirFriction();
+            }
         }
     }
 
@@ -132,7 +138,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        _rigdbody.AddForce(_direction * _playerSpeed * Time.deltaTime * Vector2.right, ForceMode2D.Force);
+        _rigdbody.AddForce(
+            _direction * _playerSpeed * Time.deltaTime * (_grounded ? 1f : _airSpeedMultiplier) * Vector2.right, 
+            ForceMode2D.Force
+        );
         
         if(Mathf.Abs(_rigdbody.linearVelocityX) > _maxSpeed)
         {
@@ -218,6 +227,13 @@ public class PlayerMovement : MonoBehaviour
     public void AllowDoubleJump(bool canDoubleJump)
     {
         _canDoubleJump = canDoubleJump;
+    }
+
+    private void AirFriction()
+    {
+        float acceleration = _airFriction * Mathf.Sign(_rigdbody.linearVelocityX) * -1;
+
+        _rigdbody.AddForce(Vector2.right * acceleration, ForceMode2D.Impulse);
     }
     #endregion
 

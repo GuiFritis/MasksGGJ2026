@@ -10,11 +10,6 @@ public class TotemManager : Singleton<TotemManager>
     public List<MaskWin> masks = new();
     [SerializeField] UIFade _uiFade;
 
-    protected override void Awake()
-    {
-        base.Awake();
-    }
-
     void Start()
     {
         DontDestroyOnLoad(gameObject);

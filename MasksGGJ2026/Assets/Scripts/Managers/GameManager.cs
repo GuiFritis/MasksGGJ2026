@@ -1,20 +1,17 @@
 using UnityEngine;
+using Utils.Singleton;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-    public static GameManager Instance;
-
     public MaskSO SelectedMask;
 
-    void Awake()
+    protected override void Awake()
     {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
+        base.Awake();
+    }
 
-        Instance = this;
+    void Start()
+    {
         DontDestroyOnLoad(gameObject);
     }
 }

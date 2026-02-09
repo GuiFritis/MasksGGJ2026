@@ -404,6 +404,8 @@ MonoBehaviour:
   _playerSpeed: 750
   _maxSpeed: 6
   _groundFriction: 10
+  _airSpeedMultiplier: 1.2
+  _airFriction: 0.1
   _dashSpeed: 20
   _jumpForce: 500
   _groundLayer:

@@ -20,7 +20,10 @@ public class PlayerBase : MonoBehaviour
     void Awake()
     {
         _playerAnimator = _animator;
-        _playerAnimator.runtimeAnimatorController = GameManager.Instance.SelectedMask.animatorOverride;
+        if(GameManager.Instance != null)
+        {
+            _playerAnimator.runtimeAnimatorController = GameManager.Instance.SelectedMask.animatorOverride;
+        }
     }
 
     #region COLLISION

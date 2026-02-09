@@ -1,28 +1,21 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
 public class LanceTrap : MonoBehaviour
 {
+    [SerializeField] private GameObject _lanceObject;
+    [SerializeField] private List<Collider2D> _colliders = new();
     [Header("Timing")]
-    public bool isOdd;
-    public float oddDelay = 1.5f;
-    public float evenDelay = 3f;
-
-    public float growTime = 0.5f;
-    public float shrinkTime = 0.5f;
-    public float activeTime = 1f;
-
+    [SerializeField] private bool _isOdd;
+    [SerializeField] private float _delay = 1.5f;
+    [SerializeField] private float _riseTime = 0.5f;
     private float _elapsed;
-
     private bool _isTimeFrozen;
 
-    [Header("Growth")]
-    public Vector2 direction = Vector2.up;
-    public float maxLength = 1f;
-
-    private Vector3 _startScale;
-    private Vector3 _endScale;
+    [Header("Rise")]
+    [SerializeField] private float _startOffset = 1f;
+    [SerializeField] private float _finalOffset = 1f;
     
     private void OnEnable()
     {
@@ -36,70 +29,75 @@ public class LanceTrap : MonoBehaviour
 
     void Start()
     {
-        direction = direction.normalized;
-
-        _startScale = transform.localScale;
-
-        _endScale = _startScale + new Vector3(
-            direction.x * maxLength,
-            direction.y * maxLength,
-            0
-        );
-
         StartCoroutine(LanceRoutine());
     }
 
     IEnumerator LanceRoutine()
     {
-        float delay = isOdd ? oddDelay : evenDelay;
-        
+        if(_isOdd)
+        {
+            yield return new WaitForSeconds(_delay + _riseTime);
+        }
         while (true)
         {    
-            yield return WaitTime(delay);
 
-            yield return ScaleLance(_startScale, _endScale, growTime);
+            SwitchColliders(true);
 
-            yield return WaitTime(activeTime);
+            yield return Rise(
+                transform.position + transform.up * _startOffset, 
+                transform.position + transform.up * _finalOffset
+            );
 
-            yield return ScaleLance(_endScale, _startScale, shrinkTime);
+            yield return new WaitForSeconds(_delay);
+
+            yield return Rise(
+                transform.position + transform.up * _finalOffset,
+                transform.position + transform.up * _startOffset
+            );
+
+            SwitchColliders(false);
+
+            yield return new WaitForSeconds(_delay);
         }
     }
 
-    IEnumerator ScaleLance(Vector3 from, Vector3 to, float time)
+    IEnumerator Rise(Vector3 startPosition, Vector3 finalPosition)
     {
         _elapsed = 0f;
 
-        while (_elapsed < time)
+        while (_elapsed < _riseTime)
         {
             yield return new WaitWhile(() => _isTimeFrozen);
-            
-            float t = _elapsed / time;
-            transform.localScale = Vector3.Lerp(from, to, t);
+
+            _lanceObject.transform.position = Vector3.Lerp(startPosition, finalPosition, _elapsed/_riseTime);
 
             _elapsed += Time.deltaTime;
 
             yield return null;
         }
 
-        transform.localScale = to;
-    }
-
-    IEnumerator WaitTime(float seconds)
-    {
-        float elapsed = 0f;
-
-        while (elapsed < seconds)
-        {
-            yield return new WaitWhile(() => _isTimeFrozen);
-
-            elapsed += Time.deltaTime;
-            
-            yield return null;
-        }
+        _lanceObject.transform.position = finalPosition;
     }
     
     private void AlternateTime(bool isTimeFrozen)
     {
         _isTimeFrozen = isTimeFrozen;
-    }    
+    }
+
+    private void SwitchColliders(bool enable)
+    {
+        foreach (Collider2D collider in _colliders)
+        {
+            collider.enabled = enable;
+        }
+    }
+
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.limeGreen;
+        Gizmos.DrawWireSphere(transform.position + transform.up * _startOffset, .4f);
+        Gizmos.color = Color.orange;
+        Gizmos.DrawWireSphere(transform.position + transform.up * _finalOffset, .4f);
+    }
 }

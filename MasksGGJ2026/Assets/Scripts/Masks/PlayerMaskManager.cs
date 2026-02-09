@@ -27,4 +27,9 @@ public class PlayerMaskManager : MonoBehaviour
         _currentCharges--;
         onChargeSpent?.Invoke(_currentCharges);
     }
+
+    void OnDisable()
+    {
+        spendCharge -= SpendCharge;
+    }
 }
