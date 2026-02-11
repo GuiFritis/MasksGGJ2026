@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MaskTeleportProjectile : MonoBehaviour
 {
-    private PlayerMovement _owner;
+    private PlayerMovement _player;
 
     [SerializeField]
     private float _lifeTime = 5f;
@@ -13,7 +13,7 @@ public class MaskTeleportProjectile : MonoBehaviour
 
     public void SetOwner(PlayerMovement player)
     {
-        _owner = player;
+        _player = player;
     }
 
     void Start()
@@ -23,41 +23,23 @@ public class MaskTeleportProjectile : MonoBehaviour
 
     void DestroySelf()
     {
-        _owner?.ClearProjectile();
+        _player?.ClearProjectile();
         Destroy(gameObject);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if ((_translocatableLayers.value & (1 << collision.gameObject.layer)) != 0)
-        {
-            var hitObject = collision.gameObject;
-            TranslocatePlayer(hitObject);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if ((_translocatableLayers.value & (1 << collision.gameObject.layer)) != 0)
         {
-            var hitObject = collision.gameObject;        
-            SFX_Pool.Instance.Play(_audio);
-            TranslocatePlayer(hitObject);
+            if(collision.gameObject.TryGetComponent(out ITranslocatable translocatable))
+            {
+                Vector3 position = translocatable.TranslocatePosition();
+                translocatable.SwitchPosition(_player.transform.position);
+                _player.transform.position = position;
+                _player.PlayerRigdbody.linearVelocity = Vector2.zero;
+                SFX_Pool.Instance.Play(_audio);
+                DestroySelf();
+            }
         }
-    }
-
-    private void TranslocatePlayer(GameObject hitObject)
-    {
-        Vector3 setPlayerPosition = _owner.transform.position;
-        Vector3 hitObjectPosition = hitObject.transform.position;
-
-        _owner.transform.position = new Vector3(hitObjectPosition.x, setPlayerPosition.y);
-        hitObject.transform.position = new Vector3(setPlayerPosition.x, hitObjectPosition.y);
-
-        hitObject
-            .GetComponent<ITranslocatableMovingObject>()?
-            .ResetPosition();
-
-        DestroySelf();
     }
 }

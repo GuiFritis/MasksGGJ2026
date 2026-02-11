@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 3022056773483558254}
   - component: {fileID: 2473905389388051870}
   - component: {fileID: 4471349060716878653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lance_PFB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,6 +401,7 @@ MonoBehaviour:
   _colliders:
   - {fileID: 4551033633744591678}
   - {fileID: 762359453528303344}
+  - {fileID: 8959813994640978252}
   _isOdd: 0
   _delay: 0.62
   _riseTime: 0.1

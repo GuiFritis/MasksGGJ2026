@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LanceTrap : MonoBehaviour
+public class LanceTrap : MonoBehaviour, ITranslocatable
 {
     [SerializeField] private GameObject _lanceObject;
     [SerializeField] private List<Collider2D> _colliders = new();
@@ -10,8 +10,10 @@ public class LanceTrap : MonoBehaviour
     [SerializeField] private bool _isOdd;
     [SerializeField] private float _delay = 1.5f;
     [SerializeField] private float _riseTime = 0.5f;
+    [SerializeField] private Vector3 _translocateOffset;
     private float _elapsed;
     private bool _isTimeFrozen;
+    private bool _isGhostActive;
 
     [Header("Rise")]
     [SerializeField] private float _startOffset = 1f;
@@ -20,11 +22,13 @@ public class LanceTrap : MonoBehaviour
     private void OnEnable()
     {
         MaskSkillFreezeTime.OnFreezeTime += AlternateTime;
+        MaskSkillGhost.OnGhostActive += GhostMode;
     }
 
     private void OnDisable()
     {
         MaskSkillFreezeTime.OnFreezeTime -= AlternateTime;
+        MaskSkillGhost.OnGhostActive -= GhostMode;
     }
 
     void Start()
@@ -40,15 +44,12 @@ public class LanceTrap : MonoBehaviour
         }
         while (true)
         {    
-
-            SwitchColliders(true);
-
             yield return Rise(
                 transform.position + transform.up * _startOffset, 
                 transform.position + transform.up * _finalOffset
             );
 
-            yield return new WaitForSeconds(_delay);
+            yield return Delay();
 
             yield return Rise(
                 transform.position + transform.up * _finalOffset,
@@ -57,7 +58,7 @@ public class LanceTrap : MonoBehaviour
 
             SwitchColliders(false);
 
-            yield return new WaitForSeconds(_delay);
+            yield return Delay();
         }
     }
 
@@ -67,21 +68,52 @@ public class LanceTrap : MonoBehaviour
 
         while (_elapsed < _riseTime)
         {
-            yield return new WaitWhile(() => _isTimeFrozen);
+            if(_isTimeFrozen)
+            {
+                yield return new WaitWhile(() => _isTimeFrozen);
+            }
 
             _lanceObject.transform.position = Vector3.Lerp(startPosition, finalPosition, _elapsed/_riseTime);
 
             _elapsed += Time.deltaTime;
 
             yield return null;
+
+            if(!_isGhostActive)
+            {
+                SwitchColliders(true);
+            }
         }
 
         _lanceObject.transform.position = finalPosition;
+    }
+
+    IEnumerator Delay()
+    {
+        _elapsed = 0f;
+        while(_elapsed < _delay)
+        {
+            if(_isTimeFrozen)
+            {
+                yield return new WaitWhile(() => _isTimeFrozen);
+            }
+            _elapsed += Time.deltaTime;
+            yield return null;
+        }
     }
     
     private void AlternateTime(bool isTimeFrozen)
     {
         _isTimeFrozen = isTimeFrozen;
+    }
+
+    private void GhostMode(bool active)
+    {
+        _isGhostActive = active;
+        if(_isGhostActive)
+        {
+            SwitchColliders(false);
+        }
     }
 
     private void SwitchColliders(bool enable)
@@ -99,5 +131,17 @@ public class LanceTrap : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position + transform.up * _startOffset, .4f);
         Gizmos.color = Color.orange;
         Gizmos.DrawWireSphere(transform.position + transform.up * _finalOffset, .4f);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position + _translocateOffset, .2f);
+    }
+
+    public Vector3 TranslocatePosition()
+    {
+        return transform.position + _translocateOffset;
+    }
+
+    public void SwitchPosition(Vector3 newPosition)
+    {
+        transform.position = newPosition;
     }
 }

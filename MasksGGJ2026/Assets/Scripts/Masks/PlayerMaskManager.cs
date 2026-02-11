@@ -10,7 +10,7 @@ public class PlayerMaskManager : MonoBehaviour
     public static Action<int> onChargeSpent;
     public static Action spendCharge;
 
-    void Awake()
+    void Start()
     {
         SetMask(GameManager.Instance.SelectedMask);
         spendCharge += SpendCharge;
