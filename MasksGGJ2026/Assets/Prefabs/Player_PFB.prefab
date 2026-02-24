@@ -445,13 +445,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
   _playerMovement: {fileID: 3611315426934052477}
-  _attackOffset: {x: 0, y: -0.8}
+  _attackOffset: {x: 0, y: -1.06}
   _attackRadius: 0.85
   _pogoLayer:
     serializedVersion: 2
     m_Bits: 128
-  _knockback: 8.3
-  _attackCooldown: 0.5
+  _knockback: 8
+  _attackCooldown: 0.4
   _attackAudio: {fileID: 11400000, guid: 4291f262a6b5696ee8e6584ecf6a533e, type: 2}
   _hitAudio: {fileID: 11400000, guid: 3be98e1426333f2c19c0e7a3acf4502d, type: 2}
 --- !u!114 &642313481781303817

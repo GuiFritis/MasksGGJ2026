@@ -84,6 +84,11 @@ public class PlayerMovement : MonoBehaviour
         _inputs.Gameplay.Jump.started += Jump;
     }
 
+    private void OnDisable()
+    {
+        _inputs.Disable();
+    }
+
     void FixedUpdate()
     {
         PlayerBase.PlayerAnimator.SetFloat(WALK_ID, MathF.Min(Mathf.Abs(_rigdbody.linearVelocityX), 1f));

@@ -11,6 +11,7 @@ public class LanceTrap : MonoBehaviour, ITranslocatable
     [SerializeField] private float _delay = 1.5f;
     [SerializeField] private float _riseTime = 0.5f;
     [SerializeField] private Vector3 _translocateOffset;
+    private static readonly WaitForSeconds WAIT_0_01 = new(0.01f); 
     private float _elapsed;
     private bool _isTimeFrozen;
     private bool _isGhostActive;
@@ -40,7 +41,7 @@ public class LanceTrap : MonoBehaviour, ITranslocatable
     {
         if(_isOdd)
         {
-            yield return new WaitForSeconds(_delay + _riseTime);
+            yield return new WaitForSeconds(_delay + _riseTime + 0.02f);
         }
         while (true)
         {    
@@ -75,9 +76,9 @@ public class LanceTrap : MonoBehaviour, ITranslocatable
 
             _lanceObject.transform.position = Vector3.Lerp(startPosition, finalPosition, _elapsed/_riseTime);
 
-            _elapsed += Time.deltaTime;
+            _elapsed += 0.01f;
 
-            yield return null;
+            yield return WAIT_0_01;
 
             if(!_isGhostActive)
             {
@@ -97,8 +98,8 @@ public class LanceTrap : MonoBehaviour, ITranslocatable
             {
                 yield return new WaitWhile(() => _isTimeFrozen);
             }
-            _elapsed += Time.deltaTime;
-            yield return null;
+            _elapsed += 0.01f;
+            yield return WAIT_0_01;
         }
     }
     
