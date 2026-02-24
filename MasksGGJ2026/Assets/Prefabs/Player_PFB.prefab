@@ -253,7 +253,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -706895858, guid: f992a888aa91aa6908b8b6f966432f59, type: 3}
+  m_Sprite: {fileID: 5882756659688833539, guid: a56d759f8b68baf4db00dd3b15078f60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -445,8 +445,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
   _playerMovement: {fileID: 3611315426934052477}
-  _attackOffset: {x: 0, y: -1.06}
-  _attackRadius: 0.85
+  _attackOffset: {x: 0, y: -0.93}
+  _attackRadius: 0.95
   _pogoLayer:
     serializedVersion: 2
     m_Bits: 128

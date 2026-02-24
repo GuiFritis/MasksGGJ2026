@@ -11,13 +11,9 @@ public class MenuMaskType : MonoBehaviour
     {
         if(TotemManager.Instance != null)
         {
-            foreach (MaskWin mask in TotemManager.Instance.masks)
+            if(TotemManager.Instance.HasUsedMask(_maskSO))
             {
-                if(mask.mask.Equals(_maskSO))
-                {
-                    _button.interactable = false;
-                    break;
-                }
+                _button.interactable = false;
             }
         }
     }

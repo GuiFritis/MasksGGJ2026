@@ -48,6 +48,11 @@ public class PlayerAttack : MonoBehaviour
         _inputs.Gameplay.Attack.started += Attack;
     }
 
+    void OnDisable()
+    {
+        _inputs.Disable();
+    }
+
     private void Attack(InputAction.CallbackContext context)
     {
         if (CanAttack)

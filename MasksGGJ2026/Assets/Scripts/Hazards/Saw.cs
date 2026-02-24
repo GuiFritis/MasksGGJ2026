@@ -4,7 +4,8 @@ using UnityEngine;
 public class Saw : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
-    [SerializeField] private Collider2D _collider;
+    [SerializeField] private Collider2D _damageCollider;
+    [SerializeField] private Collider2D _platformCollider;
     [SerializeField] private AudioSource _audioSource;
     private LayerMask _startingLayer;
 
@@ -28,8 +29,8 @@ public class Saw : MonoBehaviour
         StartCoroutine(Freezing(freeze ? 0 : 1, freeze ? 1 : 0));
         if(freeze)
         {
-            gameObject.layer = 0;
-            _collider.isTrigger = false;
+            _damageCollider.enabled = false;
+            _platformCollider.enabled = true;
         }
     }
 
@@ -46,10 +47,7 @@ public class Saw : MonoBehaviour
         }        
         _animator.speed = targetVal;
         _audioSource.volume = targetVal;
-        _collider.isTrigger = targetVal == 1;
-        if(targetVal == 1)
-        {
-            gameObject.layer = _startingLayer;
-        }
+        _damageCollider.enabled = targetVal == 1;
+        _platformCollider.enabled = targetVal != 1;
     }
 }

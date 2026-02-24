@@ -13,6 +13,12 @@ public class MaskChargesUI : MonoBehaviour
         PlayerMaskManager.onChargeSpent += ChargeSpent;
     }
 
+    void OnDisable()
+    {
+        PlayerMaskManager.onMaskEquiped -= EquipeMask;
+        PlayerMaskManager.onChargeSpent -= ChargeSpent;
+    }
+
     private void EquipeMask(MaskSO maskSO)
     {
         _rectTransform.SetSizeWithCurrentAnchors(

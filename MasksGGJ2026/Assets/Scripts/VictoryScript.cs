@@ -14,6 +14,12 @@ public class VictoryScript : MonoBehaviour
         PlayerBase.OnDeath += GameOver;
     }
 
+    void OnDisable()
+    {
+        PlayerMaskManager.onMaskEquiped -= EquipMask;
+        PlayerBase.OnDeath -= GameOver;
+    }
+
     private void EquipMask(MaskSO mask)
     {
         _mask = mask;
@@ -22,7 +28,8 @@ public class VictoryScript : MonoBehaviour
     private void GameOver()
     {
         TotemManager.Instance.AddMask(_mask, false);
-        Invoke(nameof(BackToMaskSelection), .5f);
+        TotemManager.Instance.transform.position = transform.position;
+        Invoke(nameof(BackToMaskSelection), 1.5f);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -30,7 +37,8 @@ public class VictoryScript : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             TotemManager.Instance.AddMask(_mask, true);
-            Invoke(nameof(BackToMaskSelection), .5f);
+            TotemManager.Instance.transform.position = transform.position;
+            Invoke(nameof(BackToMaskSelection), 1.5f);
         }
     }
 
