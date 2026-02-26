@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: DoubleJumpMask
   m_EditorClassIdentifier: Assembly-CSharp::MaskSO
   maskName: Mask of Material
-  description: Allows it's bearer to make the even the air a think material to jump
-    mid-air
+  description: 'You can <b>double jump</b>.
+
+    Be careful you can only do it <color=#ff0000><b>4</b></color>
+    times.'
   sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  charges: 3
+  charges: 4
   eMaskSkill: 0
   animatorOverride: {fileID: 22100000, guid: 532766b8deca88bd4b47749a858d292e, type: 2}

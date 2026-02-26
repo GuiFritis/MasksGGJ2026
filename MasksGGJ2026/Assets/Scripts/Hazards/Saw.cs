@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
-public class Saw : MonoBehaviour
+public class Saw : MonoBehaviour, ITranslocatable
 {
+    [SerializeField] private SpriteRenderer _sprite;
     [SerializeField] private Animator _animator;
     [SerializeField] private Collider2D _damageCollider;
     [SerializeField] private Collider2D _platformCollider;
@@ -17,11 +20,13 @@ public class Saw : MonoBehaviour
     void OnEnable()
     {
         MaskSkillFreezeTime.OnFreezeTime += Freeze;
+        MaskSkillGhost.OnGhostActive += GhostMode;
     }
 
     void OnDisable()
     {
         MaskSkillFreezeTime.OnFreezeTime -= Freeze;
+        MaskSkillGhost.OnGhostActive -= GhostMode;
     }
 
     private void Freeze(bool freeze)
@@ -49,5 +54,21 @@ public class Saw : MonoBehaviour
         _audioSource.volume = targetVal;
         _damageCollider.enabled = targetVal == 1;
         _platformCollider.enabled = targetVal != 1;
+    }
+
+    public Vector3 TranslocatePosition()
+    {
+        return transform.position;
+    }
+
+    public void SwitchPosition(Vector3 newPosition)
+    {
+        transform.position = newPosition;
+    }
+
+    private void GhostMode(bool active)
+    {
+        _sprite.color = active ? MaskSkillGhost.TRANSLUCID_WHITE : Color.white;
+        _damageCollider.enabled = !active;
     }
 }

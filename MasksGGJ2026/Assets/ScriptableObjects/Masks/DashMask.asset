@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: DashMask
   m_EditorClassIdentifier: Assembly-CSharp::MaskSO
   maskName: Mask of Swiftness
-  description: Allows it's bearer to move swiftly as the wind
+  description: 'Press "<b>C</b>" to <b>dash forward</b>.
+
+    Be careful you can
+    only use it <color=#ff0000><b>3</b></color> times.'
   sprite: {fileID: 21300000, guid: a53ddcb00df4d674ba95e3a219e3633f, type: 3}
   charges: 3
   eMaskSkill: 1

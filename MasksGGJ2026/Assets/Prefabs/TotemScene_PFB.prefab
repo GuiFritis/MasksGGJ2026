@@ -453,7 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIFadeOut
   _canvasGroup: {fileID: 6981338843700338191}
-  _fadeDuration: 1
+  _fadeDuration: 0.5
 --- !u!1001 &2241889712663945153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -522,11 +522,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3087998912795961139, guid: 3e1e704e5252e0d4fb43782d883cdf03, type: 3}
       propertyPath: m_Size.x
-      value: 6.4
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: 3087998912795961139, guid: 3e1e704e5252e0d4fb43782d883cdf03, type: 3}
       propertyPath: m_Size.y
-      value: 6.4
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: 3087998912795961139, guid: 3e1e704e5252e0d4fb43782d883cdf03, type: 3}
       propertyPath: m_Sprite

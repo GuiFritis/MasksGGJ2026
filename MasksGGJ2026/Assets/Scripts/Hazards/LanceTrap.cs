@@ -5,6 +5,7 @@ using UnityEngine;
 public class LanceTrap : MonoBehaviour, ITranslocatable
 {
     [SerializeField] private GameObject _lanceObject;
+    [SerializeField] private SpriteRenderer _sprite;
     [SerializeField] private List<Collider2D> _colliders = new();
     [Header("Timing")]
     [SerializeField] private bool _isOdd;
@@ -111,10 +112,9 @@ public class LanceTrap : MonoBehaviour, ITranslocatable
     private void GhostMode(bool active)
     {
         _isGhostActive = active;
-        if(_isGhostActive)
-        {
-            SwitchColliders(false);
-        }
+
+        SwitchColliders(!_isGhostActive);
+        _sprite.color = _isGhostActive ? MaskSkillGhost.TRANSLUCID_WHITE : Color.white;
     }
 
     private void SwitchColliders(bool enable)

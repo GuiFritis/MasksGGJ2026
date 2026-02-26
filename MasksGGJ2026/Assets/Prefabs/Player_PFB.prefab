@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 2344276071756403059}
   - component: {fileID: 7779102724044282132}
   - component: {fileID: 1720301318041307703}
-  - component: {fileID: 6562839421359631567}
   m_Layer: 0
   m_Name: MaskManager
   m_TagString: Untagged
@@ -54,7 +53,7 @@ MonoBehaviour:
   - {fileID: 2891544003660573802}
   - {fileID: 5091925091877370214}
   - {fileID: 2344276071756403059}
-  - {fileID: 6562839421359631567}
+  - {fileID: 0}
   - {fileID: 1720301318041307703}
 --- !u!114 &2891544003660573802
 MonoBehaviour:
@@ -126,20 +125,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MaskSkillFreezeTime
   _maskSO: {fileID: 11400000, guid: 9a868ed35c3e12a4489559ace8d8c162, type: 2}
   _playerMovement: {fileID: 3611315426934052477}
---- !u!114 &6562839421359631567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461975091388362579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2537c99d485dddc4dbf2e6ccc330541d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MaskSkillGhost
-  _maskSO: {fileID: 11400000, guid: daa187e0a17bc394d9f40fb62ad50c72, type: 2}
-  _playerBase: {fileID: 642313481781303817}
 --- !u!1 &1494540481085542592
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +409,7 @@ MonoBehaviour:
   _jumpLimiter: 0.05
   _feetBoxOffset: {x: 0, y: 0.9}
   _feetBoxSize: {x: 0.86, y: 0.3}
-  _freezeTime: 3
+  _freezeTime: 3.5
   _throwablePrefab: {fileID: 1523190071805103005, guid: 34fdfb705ddbc2241a1bed47e03b2c61, type: 3}
   _throwPoint: {fileID: 7674280653593431635}
   _throwForce: 10
@@ -472,4 +457,4 @@ MonoBehaviour:
   _animator: {fileID: 212531953248928141}
   _deathAudio: {fileID: 11400000, guid: d4694e41655baff31b92900ba46b3939, type: 2}
   _resurrectionAudio: {fileID: 11400000, guid: bdf06a78f2df7040b8b630076b31de45, type: 2}
-  _ghostTime: 3
+  _ghostTime: 2.5

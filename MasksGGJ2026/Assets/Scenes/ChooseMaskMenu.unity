@@ -1917,7 +1917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIFadeOut
   _canvasGroup: {fileID: 1137785650}
-  _fadeDuration: 3
+  _fadeDuration: 1
 --- !u!225 &1137785650
 CanvasGroup:
   m_ObjectHideFlags: 0

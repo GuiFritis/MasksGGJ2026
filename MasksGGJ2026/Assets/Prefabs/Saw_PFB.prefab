@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6043843401907196488}
   - component: {fileID: 575392323631483819}
   - component: {fileID: 3282002975723055715}
-  - component: {fileID: 79102278671546922}
   - component: {fileID: 1360036343379772498}
   m_Layer: 9
   m_Name: Saw_PFB
@@ -170,18 +169,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &79102278671546922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120424604792609825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf6f239f1f9d2b14e914bece89c9be64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TraversableObject
 --- !u!114 &1360036343379772498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddc1b3c92462fc41b81378b622dd560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Saw
+  _sprite: {fileID: 5777995714244103479}
   _animator: {fileID: 6345813591804788436}
   _damageCollider: {fileID: 575392323631483819}
   _platformCollider: {fileID: 4399811310525956472}

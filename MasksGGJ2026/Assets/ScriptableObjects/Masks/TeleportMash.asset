@@ -13,9 +13,14 @@ MonoBehaviour:
   m_Name: TeleportMash
   m_EditorClassIdentifier: Assembly-CSharp::MaskSO
   maskName: Mask of Reality
-  description: Allows it's bearer to shape reality, switching places with an object
-    in sight
+  description: 'Press "<b>C</b>" to shoot a <b>teleporting projectile</b>.
+
+    When
+    it hits an object, you will swap places with that object.
+
+    Be careful you
+    can only use it <color=#ff0000><b>3</b></color> times.'
   sprite: {fileID: 21300000, guid: 85b21c9a8c06a554787432d9d42d7190, type: 3}
-  charges: 2
+  charges: 3
   eMaskSkill: 2
   animatorOverride: {fileID: 22100000, guid: acdc4f4ea0c8ddce2b73d2e404604aec, type: 2}

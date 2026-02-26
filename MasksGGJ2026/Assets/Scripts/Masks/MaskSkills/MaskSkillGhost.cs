@@ -5,6 +5,7 @@ public class MaskSkillGhost : MaskSkillBase
 {
     [SerializeField] private PlayerBase _playerBase;
     public static Action<bool> OnGhostActive;
+    public static readonly Color TRANSLUCID_WHITE = new(1, 1, 1, .3f);
 
     public override void EquipMask(MaskSO mask)
     {
@@ -17,8 +18,13 @@ public class MaskSkillGhost : MaskSkillBase
     {
         if(charges <= 0)
         {
-            _playerBase.AllowGhost(false);
+            Invoke(nameof(DisableGhost), .6f);
             PlayerMaskManager.onChargeSpent -= ChargeSpent;
         }
+    }
+
+    private void DisableGhost()
+    {
+        _playerBase.AllowGhost(false);
     }
 }

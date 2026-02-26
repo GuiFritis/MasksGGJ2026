@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 3022056773483558254}
   - component: {fileID: 2473905389388051870}
   - component: {fileID: 4471349060716878653}
+  - component: {fileID: 109921628620099840}
   m_Layer: 8
   m_Name: Lance_PFB
   m_TagString: Untagged
@@ -398,15 +399,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LanceTrap
   _lanceObject: {fileID: 846603843650526761}
+  _sprite: {fileID: 4466821971727332138}
   _colliders:
   - {fileID: 4551033633744591678}
   - {fileID: 762359453528303344}
-  - {fileID: 8959813994640978252}
   _isOdd: 0
   _delay: 0.62
   _riseTime: 0.1
+  _translocateOffset: {x: 0, y: 0, z: 0}
   _startOffset: -1.8
   _finalOffset: 1.47
+--- !u!61 &109921628620099840
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2632222965745044873}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 1.2744814}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 0.31}
+    newSize: {x: 0.7, y: 3.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.91, y: 2.8589628}
+  m_EdgeRadius: 0
 --- !u!1 &4816497511285409908
 GameObject:
   m_ObjectHideFlags: 0

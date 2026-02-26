@@ -29,7 +29,7 @@ public class MaskTeleportProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((_translocatableLayers.value & (1 << collision.gameObject.layer)) != 0)
+        if ((_translocatableLayers.value & (1 << collision.gameObject.layer)) > 0)
         {
             if(collision.gameObject.TryGetComponent(out ITranslocatable translocatable))
             {
@@ -38,6 +38,7 @@ public class MaskTeleportProjectile : MonoBehaviour
                 _player.transform.position = position;
                 _player.PlayerRigdbody.linearVelocity = Vector2.zero;
                 SFX_Pool.Instance.Play(_audio);
+                PlayerMaskManager.spendCharge?.Invoke();
                 DestroySelf();
             }
         }

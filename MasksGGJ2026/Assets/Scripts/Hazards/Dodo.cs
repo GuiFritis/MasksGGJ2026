@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Dodo : MonoBehaviour
+public class Dodo : MonoBehaviour, ITranslocatable
 {
     [SerializeField] private Rigidbody2D _rigidbody;
     private Vector2 _originalPosition = Vector2.zero;
@@ -77,5 +77,15 @@ public class Dodo : MonoBehaviour
     private void AlternateTime(bool isTimeFrozen)
     {
         _isTimeFrozen = isTimeFrozen;
-    }    
+    }
+
+    public Vector3 TranslocatePosition()
+    {
+        return transform.position;
+    }
+
+    public void SwitchPosition(Vector3 newPosition)
+    {
+        transform.position = newPosition;
+    }
 }

@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(Collider2D))]
 public class TraversableObject : MonoBehaviour
 {
-    private Collider2D _collider;
+    [SerializeField] private Tilemap _tilemap;
+    [SerializeField] private Collider2D _collider;
 
     void OnValidate()
     {
@@ -20,8 +22,9 @@ public class TraversableObject : MonoBehaviour
         MaskSkillGhost.OnGhostActive -= AlternateCollider;
     }
 
-    private void AlternateCollider(bool isGhost)
+    private void AlternateCollider(bool active)
     {
-        _collider.enabled = !isGhost;
+        _collider.enabled = !active;
+        _tilemap.color = active ? MaskSkillGhost.TRANSLUCID_WHITE : Color.white;
     }    
 }
