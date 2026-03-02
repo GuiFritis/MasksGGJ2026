@@ -11,7 +11,7 @@ public class MenuMaskType : MonoBehaviour
     {
         if(TotemManager.Instance != null)
         {
-            if(TotemManager.Instance.HasUsedMask(_maskSO))
+            if(TotemManager.Instance.HasWonWithMask(_maskSO))
             {
                 _button.interactable = false;
             }

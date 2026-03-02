@@ -16,8 +16,8 @@ MonoBehaviour:
   description: 'Press "<b>C</b>" to <b>dash forward</b>.
 
     Be careful you can
-    only use it <color=#ff0000><b>3</b></color> times.'
-  sprite: {fileID: 21300000, guid: a53ddcb00df4d674ba95e3a219e3633f, type: 3}
+    only use it <color=#ffdd00><b>3</b></color> times.'
+  sprite: {fileID: 21300000, guid: 3709158d7f33ce94290800914522585a, type: 3}
   charges: 3
   eMaskSkill: 1
   animatorOverride: {fileID: 22100000, guid: 570cce9cdaf1195bbb2c2a3af3556e06, type: 2}

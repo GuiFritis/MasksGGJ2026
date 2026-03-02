@@ -16,10 +16,11 @@ MonoBehaviour:
   description: 'When you take damage you <b>don''t die</b>.
 
     Instead, you become
-    a <b>ghost</b> <small>(for a short moment)</small> that can go through objects.
+    a <b>ghost</b> <style="small">(for a short moment)</style> that can go through
+    objects.
 
-    Be
-    careful you can only ghost it <color=#ff0000><b>2</b></color> times.'
+    Be careful you can only ghost it <color=#ffdd00><b>2</b></color>
+    times.'
   sprite: {fileID: 21300000, guid: 9d8c3570320073f43a9a4b89342d7846, type: 3}
   charges: 2
   eMaskSkill: 4

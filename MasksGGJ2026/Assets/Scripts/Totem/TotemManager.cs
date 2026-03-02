@@ -9,6 +9,7 @@ public class TotemManager : Singleton<TotemManager>
     [SerializeField] private List<TotemPart> _totemParts = new();
     private List<MaskSO> _usedMasks = new();
     public bool HasUsedMask (MaskSO mask) => _usedMasks.Contains(mask);
+    public bool HasWonWithMask (MaskSO mask) => _totemParts.Find(i => i.mask.Equals(mask)).win;
 
     [SerializeField] UIFade _uiFade;
 
@@ -30,11 +31,10 @@ public class TotemManager : Singleton<TotemManager>
 
     public void Enter(Vector3 position)
     {
+        _animator.SetTrigger(ANIMATION_ID);
         transform.position = position;
-        _uiFade.FadeIn(() => _animator.SetTrigger(ANIMATION_ID));  
+        _uiFade.FadeIn(null); 
     }
-
-
 
     public void AddMask(MaskSO mask, bool win)
     {
@@ -45,7 +45,6 @@ public class TotemManager : Singleton<TotemManager>
             part.Win();
             part.maskSprite.sprite = mask.sprite;
         }
-        _animator.SetTrigger(ANIMATION_ID);
     }
 }
 

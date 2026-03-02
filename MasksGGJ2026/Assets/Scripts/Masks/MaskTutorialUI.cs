@@ -8,14 +8,14 @@ public class MaskTutorialUI : MonoBehaviour
 
     void Start()
     {
-        Invoke(nameof(DisplayTutorial), 2);
+        DisplayTutorial();
     }
 
     private void DisplayTutorial()
     {
         _textMesh.text = GameManager.Instance.SelectedMask.description;
-        _textMesh.DOColor(Color.white, .5f).OnComplete(
-            () => _textMesh.DOColor(Color.clear, .5f).SetDelay(3f)
+        _textMesh.DOColor(Color.white, .5f).SetDelay(5).OnComplete(
+            () => _textMesh.DOColor(Color.clear, .5f).SetDelay(7f)
         );
     }
 }

@@ -15,9 +15,9 @@ MonoBehaviour:
   maskName: Mask of Material
   description: 'You can <b>double jump</b>.
 
-    Be careful you can only do it <color=#ff0000><b>4</b></color>
+    Be careful you can only do it <color=#ffdd00><b>4</b></color>
     times.'
-  sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  sprite: {fileID: 21300000, guid: a53ddcb00df4d674ba95e3a219e3633f, type: 3}
   charges: 4
   eMaskSkill: 0
   animatorOverride: {fileID: 22100000, guid: 532766b8deca88bd4b47749a858d292e, type: 2}

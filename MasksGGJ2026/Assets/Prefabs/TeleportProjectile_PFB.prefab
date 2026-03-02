@@ -172,5 +172,5 @@ MonoBehaviour:
   _lifeTime: 5
   _translocatableLayers:
     serializedVersion: 2
-    m_Bits: 896
+    m_Bits: 768
   _audio: {fileID: 11400000, guid: c071dcddc3b6729c8bef7cfd7e4ea679, type: 2}

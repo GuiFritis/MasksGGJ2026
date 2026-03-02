@@ -1,11 +1,10 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Utils;
 
 [RequireComponent(typeof(Collider2D))]
 public class VictoryScript : MonoBehaviour
 {
+    [SerializeField] private Transform _playerTransform;
     private MaskSO _mask;
 
     void Awake()
@@ -28,8 +27,8 @@ public class VictoryScript : MonoBehaviour
     private void GameOver()
     {
         TotemManager.Instance.AddMask(_mask, false);
-        TotemManager.Instance.transform.position = transform.position;
-        Invoke(nameof(BackToMaskSelection), 1.5f);
+        TotemManager.Instance.Enter(_playerTransform.position);
+        Invoke(nameof(BackToMaskSelection), 3f);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -37,8 +36,8 @@ public class VictoryScript : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             TotemManager.Instance.AddMask(_mask, true);
-            TotemManager.Instance.transform.position = transform.position;
-            Invoke(nameof(BackToMaskSelection), 1.5f);
+            TotemManager.Instance.Enter(_playerTransform.position);
+            Invoke(nameof(BackToMaskSelection), 3f);
         }
     }
 

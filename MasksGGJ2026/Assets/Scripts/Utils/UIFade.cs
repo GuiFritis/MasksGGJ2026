@@ -20,7 +20,7 @@ public class UIFade : MonoBehaviour
         _canvasGroup.blocksRaycasts = false;
 
         _currentTween?.Kill();
-
+        _canvasGroup.alpha = 0;
         _currentTween = _canvasGroup
             .DOFade(1f, _fadeDuration)
             .SetEase(Ease.InOutQuad)
@@ -30,7 +30,7 @@ public class UIFade : MonoBehaviour
     public void FadeIn(TweenCallback onEnd)
     {
         _currentTween?.Kill();
-
+        _canvasGroup.alpha = 1;
         _currentTween = _canvasGroup
             .DOFade(0f, _fadeDuration)
             .SetEase(Ease.InOutQuad)
